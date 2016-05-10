@@ -8,7 +8,8 @@
 
 import UIKit
 import Parse
-//commit test pushi/pull testing for version control
+//commit test pushi/pull testing for version control recieved
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
