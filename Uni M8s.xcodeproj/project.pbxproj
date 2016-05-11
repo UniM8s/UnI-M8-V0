@@ -24,9 +24,9 @@
 		E00E3BDD1CD95F5100EBAECB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00E3BDC1CD95F5100EBAECB /* SystemConfiguration.framework */; };
 		E00E3BDF1CD95F7800EBAECB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E00E3BDE1CD95F7800EBAECB /* libz.tbd */; };
 		E00E3BE11CD95F8800EBAECB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E00E3BE01CD95F8800EBAECB /* libsqlite3.tbd */; };
-		E00E3BFE1CD9645900EBAECB /* Parse.FrameworkSDK in Resources */ = {isa = PBXBuildFile; fileRef = E00E3BFD1CD9645900EBAECB /* Parse.FrameworkSDK */; };
 		E00E3C001CD9656A00EBAECB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00E3BFF1CD9656A00EBAECB /* Parse.framework */; };
 		E00E3C051CD968CB00EBAECB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00E3C041CD968CB00EBAECB /* Bolts.framework */; };
+		E04F61BD1CE39A780029160C /* Parse.FrameworkSDK in Resources */ = {isa = PBXBuildFile; fileRef = E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,10 +70,10 @@
 		E00E3BDC1CD95F5100EBAECB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E00E3BDE1CD95F7800EBAECB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E00E3BE01CD95F8800EBAECB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		E00E3BFD1CD9645900EBAECB /* Parse.FrameworkSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Parse.FrameworkSDK; path = ../../../Downloads/Parse.FrameworkSDK; sourceTree = "<group>"; };
 		E00E3BFF1CD9656A00EBAECB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E00E3C011CD9666100EBAECB /* Uni M8s-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Uni M8s-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		E00E3C041CD968CB00EBAECB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Parse.FrameworkSDK; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +169,7 @@
 		E00E3BE21CD95FA500EBAECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E00E3BFD1CD9645900EBAECB /* Parse.FrameworkSDK */,
+				E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */,
 				E00E3BDE1CD95F7800EBAECB /* libz.tbd */,
 				E00E3BE01CD95F8800EBAECB /* libsqlite3.tbd */,
 				E00E3C041CD968CB00EBAECB /* Bolts.framework */,
@@ -294,7 +294,7 @@
 				E00E3BA81CD9533600EBAECB /* LaunchScreen.storyboard in Resources */,
 				E00E3BA51CD9533600EBAECB /* Assets.xcassets in Resources */,
 				E00E3BA31CD9533600EBAECB /* Main.storyboard in Resources */,
-				E00E3BFE1CD9645900EBAECB /* Parse.FrameworkSDK in Resources */,
+				E04F61BD1CE39A780029160C /* Parse.FrameworkSDK in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
