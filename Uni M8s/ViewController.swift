@@ -11,13 +11,24 @@ import Parse
 
 class ViewController: UIViewController
 {
-    
+    var ActiveSignUp = true
 
     @IBOutlet var Name: UITextField!
     
     @IBOutlet var UniversityEmail: UITextField!
     
     @IBOutlet var Password: UITextField!
+    
+    //Button Actions
+    
+    
+    @IBOutlet var SignUpLogin: UIButton! //duplicate
+    @IBOutlet var SignupButton: UIButton!
+  
+    @IBOutlet var RegisteredText: UILabel!
+    
+    @IBOutlet var LoginSignButton: UIButton!
+    
     
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -45,7 +56,7 @@ class ViewController: UIViewController
             
             if UniversityEmail.text == "" || Password.text == "" || Name.text == "" {
             
-            
+            displayAlert("Error In Form", message: "oops! Please enter your name, a valid university email, and password")
             
             
             
@@ -59,12 +70,18 @@ class ViewController: UIViewController
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
+                
+            var errorMessage = "oops please try again"
+                
+            if ActiveSignUp == true {
+                
+                
             let user = PFUser()
             user.username = Name.text
             user.password = Password.text
             user.email = UniversityEmail.text
             
-            var errorMessage = "oops please try again"
+           
             
             
             user.signUpInBackgroundWithBlock({ (success, error) in
@@ -85,26 +102,82 @@ class ViewController: UIViewController
                 
                    }
             
+                self.displayAlert("Failed Signup", message: errorMessage)
+                    
             
             }
                 
                 })
+                    
+                } else {
+                
+                    PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
+                        { (user,error)  in
+                            
+                    self.activityIndicator.stopAnimating()
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                            
+                            if user != nil {
+                                //logged in
+                                
+                            } else {
+
+                                if let errorString = error!.userInfo["error"] as? String {
+                                    
+                                    errorMessage = errorString
+                                    
+                                    
+                                }
+                                
+                                self.displayAlert("Failed Login", message:errorMessage)
+                            }
+                
     
             
     
-            
-            
-            
-    
+                    })
+        
+        
                 }}
         
-    
-        
-    
                 
+            }
+            
 
     
     @IBAction func Login(sender: AnyObject) {
+        
+        
+        if ActiveSignUp == true {
+            
+         SignUpLogin.setTitle("Log In", forState: UIControlState.Normal)
+            
+         SignupButton.setTitle("Log In", forState: UIControlState.Normal)
+            
+         RegisteredText.text = "Not Registered"
+        
+         LoginSignButton.setTitle("Sign Up", forState: UIControlState.Normal)
+        
+         ActiveSignUp = false
+            
+        } else {
+          
+            SignUpLogin.setTitle("Sign Up", forState: UIControlState.Normal)
+
+            
+            SignupButton.setTitle("Sign Up", forState: UIControlState.Normal)
+            
+            RegisteredText.text = "Already Registered"
+            
+            LoginSignButton.setTitle("Log In", forState: UIControlState.Normal)
+            
+            ActiveSignUp = true
+   
+        
+        
+        }
+        
+        
     }
 
     

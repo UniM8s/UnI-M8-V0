@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VR-na-jrV">
-                                <rect key="frame" x="254" y="363" width="46" height="30"/>
+                                <rect key="frame" x="242" y="363" width="70" height="33.5"/>
                                 <state key="normal" title="Log in "/>
                                 <connections>
                                     <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OK1-9x-dqV"/>
@@ -36,13 +36,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-Gr-14c">
-                                <rect key="frame" x="20" y="367" width="201" height="21"/>
+                                <rect key="frame" x="20" y="367" width="201" height="29.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8o-9Y-eRm">
-                                <rect key="frame" x="161" y="278" width="52" height="30"/>
+                                <rect key="frame" x="142" y="278" width="92" height="39"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
                                     <action selector="Signup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nyt-CH-xos"/>
@@ -63,14 +63,18 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="LoginSignButton" destination="4VR-na-jrV" id="9Jo-zf-0L0"/>
                         <outlet property="Name" destination="Hf9-1r-mcU" id="GqT-ua-mrn"/>
                         <outlet property="Password" destination="ADQ-WD-AUv" id="21t-F0-6NU"/>
+                        <outlet property="RegisteredText" destination="gKh-Gr-14c" id="0Ql-El-Zq4"/>
+                        <outlet property="SignUpLogin" destination="A8o-9Y-eRm" id="txC-RV-0ed"/>
+                        <outlet property="SignupButton" destination="A8o-9Y-eRm" id="dK4-yd-rd7"/>
                         <outlet property="UniversityEmail" destination="ed5-WW-WIw" id="khB-Qq-Lnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199.5" y="257.5"/>
+            <point key="canvasLocation" x="371.5" y="289.5"/>
         </scene>
     </scenes>
 </document>
