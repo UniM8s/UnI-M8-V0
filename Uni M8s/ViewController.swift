@@ -19,10 +19,12 @@ class ViewController: UIViewController
     
     @IBOutlet var Password: UITextField!
     
+   
     //Button Actions
     
     
     @IBOutlet var SignUpLogin: UIButton! //duplicate
+    
     @IBOutlet var SignupButton: UIButton!
   
     @IBOutlet var RegisteredText: UILabel!
@@ -31,7 +33,6 @@ class ViewController: UIViewController
     
     
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
-    
     
     func displayAlert(title: String, message: String) {
     
@@ -93,6 +94,10 @@ class ViewController: UIViewController
                  
                     // Signup was successful
                     
+                    self.performSegueWithIdentifier("Login", sender: self)
+                    
+                    
+                    
                 } else {
                     
                     if let errorString = error!.userInfo["error"] as? String {
@@ -111,14 +116,20 @@ class ViewController: UIViewController
                     
                 } else {
                 
-                    PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
-                        { (user,error)  in
+                    PFUser.logInWithUsernameInBackground(Name.text!, password: Password.text!, block:
+                        { (user,error) -> Void in
                             
                     self.activityIndicator.stopAnimating()
                     UIApplication.sharedApplication().endIgnoringInteractionEvents()
                             
                             if user != nil {
                                 //logged in
+                                
+                              
+                                
+                                self.performSegueWithIdentifier("login", sender: self)
+                                
+                                
                                 
                             } else {
 
@@ -188,6 +199,17 @@ class ViewController: UIViewController
         
     }
 
+    override func viewDidAppear(animated: Bool) {
+        
+       if PFUser.currentUser() != nil {
+            self.performSegueWithIdentifier("login", sender: self)
+            
+        
+    
+        
+    }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

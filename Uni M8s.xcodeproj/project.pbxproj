@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69D0A7601CE56201004FB9F1 /* SearchProfileChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */; };
 		E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */; };
 		E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9F1CD9533600EBAECB /* ViewController.swift */; };
 		E00E3BA31CD9533600EBAECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00E3BA11CD9533600EBAECB /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProfileChatTableViewController.swift; sourceTree = "<group>"; };
 		E00E3B9A1CD9533600EBAECB /* Uni M8s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uni M8s.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E00E3B9F1CD9533600EBAECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				E00E3C011CD9666100EBAECB /* Uni M8s-Bridging-Header.h */,
 				E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */,
 				E00E3B9F1CD9533600EBAECB /* ViewController.swift */,
+				69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */,
 				E00E3BA11CD9533600EBAECB /* Main.storyboard */,
 				E00E3BA41CD9533600EBAECB /* Assets.xcassets */,
 				E00E3BA61CD9533600EBAECB /* LaunchScreen.storyboard */,
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */,
+				69D0A7601CE56201004FB9F1 /* SearchProfileChatTableViewController.swift in Sources */,
 				E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
