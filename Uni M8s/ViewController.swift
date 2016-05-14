@@ -24,7 +24,7 @@ class ViewController: UIViewController
     
     
     @IBOutlet var SignUpLogin: UIButton! //duplicate
-    
+
     @IBOutlet var SignupButton: UIButton!
   
     @IBOutlet var RegisteredText: UILabel!
@@ -75,7 +75,9 @@ class ViewController: UIViewController
                 
             var errorMessage = "oops please try again"
                 
-            if ActiveSignUp == true {
+           
+                
+                if ActiveSignUp == true {
                 
                 
             let user = PFUser()
@@ -152,6 +154,8 @@ class ViewController: UIViewController
         
                 }}
         
+            
+    
                 
             }
             
@@ -163,6 +167,9 @@ class ViewController: UIViewController
         
         if ActiveSignUp == true {
             
+            Name.hidden = !Name.hidden;
+            
+            
          SignUpLogin.setTitle("Log In", forState: UIControlState.Normal)
             
          SignupButton.setTitle("Log In", forState: UIControlState.Normal)
@@ -173,7 +180,10 @@ class ViewController: UIViewController
             
          ActiveSignUp = false
             
+            
+            
         } else {
+           Name.hidden = false
           
             SignUpLogin.setTitle("Sign Up", forState: UIControlState.Normal)
 
@@ -187,9 +197,17 @@ class ViewController: UIViewController
             
             ActiveSignUp = true
    
-        
+            //Remove Text Fields
+
+                
+            
+                
+            
+
         
         }
+        
+        
         
         
     }
@@ -203,8 +221,10 @@ class ViewController: UIViewController
    
 // Makes log in appear first
     
+            
         if ActiveSignUp == true {
-    
+            
+            Name.hidden = !Name.hidden;
             
             SignUpLogin.setTitle("Log In", forState: UIControlState.Normal)
             
@@ -213,16 +233,27 @@ class ViewController: UIViewController
             RegisteredText.text = "Not Registered"
             
             LoginSignButton.setTitle("Sign Up", forState: UIControlState.Normal)
-        
+            
             ActiveSignUp = false
             
-//Remove Text Fields
+        } else {
             
-            Name.hidden = !Name.hidden;
+            Name.hidden = false
             
-   
+            SignUpLogin.setTitle("Sign Up", forState: UIControlState.Normal)
+            
+            
+            SignupButton.setTitle("Sign Up", forState: UIControlState.Normal)
+            
+            RegisteredText.text = "Already Registered"
+            
+            LoginSignButton.setTitle("Log In", forState: UIControlState.Normal)
+            
+            
+            ActiveSignUp = true
+
         }
-    
+        
 }
 
     override func viewDidAppear(animated: Bool) {
