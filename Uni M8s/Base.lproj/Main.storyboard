@@ -77,7 +77,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="University Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wPO-Hg-r3h">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="UniName" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="University Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wPO-Hg-r3h">
                                 <rect key="frame" x="20" y="222" width="334" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -87,8 +87,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-FQ-oYS">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="PURPLE" offImage="PURPLE" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-FQ-oYS">
                                 <rect key="frame" x="162" y="333" width="51" height="31"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                </accessibility>
                                 <color key="onTintColor" red="0.56554526090000001" green="0.1860924363" blue="0.7254902124" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.0" green="0.98267751960000005" blue="0.86226055440000005" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
@@ -98,7 +101,7 @@
                                 <color key="textColor" red="0.56554526090000001" green="0.1860924363" blue="0.7254902124" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.59103378983436605" green="0.19016385421153637" blue="0.75690382496544506" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="-1" height="0.0"/>
+                                <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Men" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytm-Si-5bJ">
                                 <rect key="frame" x="111" y="333" width="37" height="31"/>
@@ -200,6 +203,7 @@
     <resources>
         <image name="BAckground Image" width="464" height="1198"/>
         <image name="Fade Filter - blue" width="238" height="392"/>
+        <image name="PURPLE" width="28" height="28"/>
         <image name="UniICON" width="120" height="120"/>
     </resources>
 </document>
