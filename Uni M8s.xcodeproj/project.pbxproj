@@ -28,6 +28,8 @@
 		E00E3C001CD9656A00EBAECB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00E3BFF1CD9656A00EBAECB /* Parse.framework */; };
 		E00E3C051CD968CB00EBAECB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00E3C041CD968CB00EBAECB /* Bolts.framework */; };
 		E04F61BD1CE39A780029160C /* Parse.FrameworkSDK in Resources */ = {isa = PBXBuildFile; fileRef = E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */; };
+		E04F61C01CE7DADC0029160C /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */; };
+		E04F61C11CE7DADC0029160C /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		E00E3C011CD9666100EBAECB /* Uni M8s-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Uni M8s-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		E00E3C041CD968CB00EBAECB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Parse.FrameworkSDK; sourceTree = "<group>"; };
+		E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04F61C01CE7DADC0029160C /* libstdc++.6.0.9.tbd in Frameworks */,
+				E04F61C11CE7DADC0029160C /* libstdc++.6.tbd in Frameworks */,
 				E00E3BE11CD95F8800EBAECB /* libsqlite3.tbd in Frameworks */,
 				E00E3BDF1CD95F7800EBAECB /* libz.tbd in Frameworks */,
 				E00E3BDD1CD95F5100EBAECB /* SystemConfiguration.framework in Frameworks */,
@@ -172,6 +178,8 @@
 		E00E3BE21CD95FA500EBAECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */,
+				E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */,
 				E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */,
 				E00E3BDE1CD95F7800EBAECB /* libz.tbd */,
 				E00E3BE01CD95F8800EBAECB /* libsqlite3.tbd */,
@@ -400,6 +408,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -445,6 +454,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -469,6 +479,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Parse.FrameworkSDK",
@@ -476,7 +487,7 @@
 				);
 				INFOPLIST_FILE = "Uni M8s/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-AG632FW9U.LCMB-Apps.Uni-M8s";
+				PRODUCT_BUNDLE_IDENTIFIER = "AG632FW9ULCMB-Apps.Uni-M8s";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uni M8s-Bridging-Header.h";
@@ -491,6 +502,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Parse.FrameworkSDK",
@@ -498,7 +510,7 @@
 				);
 				INFOPLIST_FILE = "Uni M8s/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-AG632FW9U.LCMB-Apps.Uni-M8s";
+				PRODUCT_BUNDLE_IDENTIFIER = "AG632FW9ULCMB-Apps.Uni-M8s";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uni M8s-Bridging-Header.h";
