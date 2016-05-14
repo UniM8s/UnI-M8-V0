@@ -35,6 +35,6 @@
     </scenes>
     <resources>
         <image name="BAckground Image" width="464" height="1198"/>
-        <image name="Fade Filter - blue" width="284" height="177"/>
+        <image name="Fade Filter - blue" width="238" height="392"/>
     </resources>
 </document>
