@@ -54,6 +54,7 @@ class ViewController: UIViewController
     
     
         @IBAction func Signup(sender: AnyObject) {
+        
             
             if UniversityEmail.text == "" || Password.text == "" || Name.text == "" {
             
@@ -116,7 +117,7 @@ class ViewController: UIViewController
                     
                 } else {
                 
-                    PFUser.logInWithUsernameInBackground(Name.text!, password: Password.text!, block:
+                PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
                         { (user,error) -> Void in
                             
                     self.activityIndicator.stopAnimating()
@@ -157,7 +158,8 @@ class ViewController: UIViewController
 
     
     @IBAction func Login(sender: AnyObject) {
-        
+       
+       
         
         if ActiveSignUp == true {
             
@@ -168,7 +170,7 @@ class ViewController: UIViewController
          RegisteredText.text = "Not Registered"
         
          LoginSignButton.setTitle("Sign Up", forState: UIControlState.Normal)
-        
+            
          ActiveSignUp = false
             
         } else {
@@ -181,6 +183,7 @@ class ViewController: UIViewController
             RegisteredText.text = "Already Registered"
             
             LoginSignButton.setTitle("Log In", forState: UIControlState.Normal)
+            
             
             ActiveSignUp = true
    
@@ -197,7 +200,30 @@ class ViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
+   
+// Makes log in appear first
+    
+        if ActiveSignUp == true {
+    
+            
+            SignUpLogin.setTitle("Log In", forState: UIControlState.Normal)
+            
+            SignupButton.setTitle("Log In", forState: UIControlState.Normal)
+            
+            RegisteredText.text = "Not Registered"
+            
+            LoginSignButton.setTitle("Sign Up", forState: UIControlState.Normal)
+        
+            ActiveSignUp = false
+            
+//Remove Text Fields
+            
+            Name.hidden = !Name.hidden;
+            
+   
+        }
+    
+}
 
     override func viewDidAppear(animated: Bool) {
         
