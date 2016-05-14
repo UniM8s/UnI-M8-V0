@@ -51,7 +51,6 @@ class ViewController: UIViewController
     
     
     
-    
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
     
     func displayAlert(title: String, message: String) {
@@ -73,9 +72,10 @@ class ViewController: UIViewController
     
     
         @IBAction func Signup(sender: AnyObject) {
-        
             
-            if  Name.text == "" || Password.text == "" {
+            
+            
+            if  Name.text == "" || Password.text == ""  {
             
             displayAlert("Error In Form", message: "oops! Please enter a valid university email, and password")
             
@@ -103,8 +103,6 @@ class ViewController: UIViewController
             user.username = Name.text // UNI_EMAIL
             user.password = Password.text
             user.email = UniversityEmail.text // NAME
-            
-           
             
             
             user.signUpInBackgroundWithBlock({ (success, error) in
@@ -135,6 +133,12 @@ class ViewController: UIViewController
             }
                 
                 })
+                    
+                    
+                    
+                    
+                    
+                    
                     
                 } else {
                     
