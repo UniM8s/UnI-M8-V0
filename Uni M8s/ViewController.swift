@@ -13,9 +13,9 @@ class ViewController: UIViewController
 {
     var ActiveSignUp = true
 
-    @IBOutlet var Name: UITextField! //Rename UNI-EMAIL
+    @IBOutlet var Name: UITextField! //IMPORTANT NOTES ======> Rename UNI-EMAIL - Restoration ID
     
-    @IBOutlet var UniversityEmail: UITextField!   //Rename as NAME
+    @IBOutlet var UniversityEmail: UITextField!   //IMPORTANT NOTES ======> Rename as NAME - Restoration ID
     
     @IBOutlet var Password: UITextField!
     
@@ -68,7 +68,6 @@ class ViewController: UIViewController
             self.presentViewController(alert, animated: true, completion: nil)
   
         
-        
     }
     }
     
@@ -76,9 +75,9 @@ class ViewController: UIViewController
         @IBAction func Signup(sender: AnyObject) {
         
             
-            if UniversityEmail.text == "" || Password.text == "" || Name.text == "" {
+            if  Name.text == "" || Password.text == "" {
             
-            displayAlert("Error In Form", message: "oops! Please enter your name, a valid university email, and password")
+            displayAlert("Error In Form", message: "oops! Please enter a valid university email, and password")
             
             
             
@@ -101,9 +100,9 @@ class ViewController: UIViewController
                 
                 
             let user = PFUser()
-            user.username = Name.text
+            user.username = Name.text // UNI_EMAIL
             user.password = Password.text
-            user.email = UniversityEmail.text
+            user.email = UniversityEmail.text // NAME
             
            
             
@@ -188,7 +187,7 @@ class ViewController: UIViewController
         
         if ActiveSignUp == true {
             
-            //Name.hidden = !Name.hidden;
+            UniversityEmail.hidden = !Name.hidden;
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -213,7 +212,7 @@ class ViewController: UIViewController
             
         } else {
             
-           // Name.hidden = false
+            UniversityEmail.hidden = false
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -249,7 +248,7 @@ class ViewController: UIViewController
             
         if ActiveSignUp == true {
             
-           // Name.hidden = !Name.hidden;
+            UniversityEmail.hidden = !Name.hidden;
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -271,7 +270,7 @@ class ViewController: UIViewController
             
         } else {
             
-           // Name.hidden = false
+            UniversityEmail.hidden = false
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
