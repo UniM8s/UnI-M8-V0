@@ -13,15 +13,15 @@ class ViewController: UIViewController
 {
     var ActiveSignUp = true
 
-    @IBOutlet var Name: UITextField!
+    @IBOutlet var Name: UITextField! //Rename UNI-EMAIL
     
-    @IBOutlet var UniversityEmail: UITextField!
+    @IBOutlet var UniversityEmail: UITextField!   //Rename as NAME
     
     @IBOutlet var Password: UITextField!
     
+    @IBOutlet var ConfirmPassword: UITextField!
    
-    //Button Actions
-    
+//Button Actions
     
     @IBOutlet var SignUpLogin: UIButton! //duplicate
 
@@ -30,6 +30,26 @@ class ViewController: UIViewController
     @IBOutlet var RegisteredText: UILabel!
     
     @IBOutlet var LoginSignButton: UIButton!
+    
+    
+//Sign Up Section to be hidden & Utilized
+    
+    @IBOutlet var UniName: UITextField!
+    
+    @IBOutlet var Gender: UITextField!
+    
+    @IBOutlet var InterestSwitch: UISwitch!
+    
+    
+//Labels to be Hidden + Switch
+    
+    @IBOutlet var WhoAreYouInt: UILabel!
+    
+    @IBOutlet var Men: UILabel!
+    
+    @IBOutlet var Women: UILabel!
+    
+    
     
     
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
@@ -118,8 +138,9 @@ class ViewController: UIViewController
                 })
                     
                 } else {
+                    
                 
-                PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
+                PFUser.logInWithUsernameInBackground(Name.text!, password: Password.text!, block:
                         { (user,error) -> Void in
                             
                     self.activityIndicator.stopAnimating()
@@ -167,7 +188,15 @@ class ViewController: UIViewController
         
         if ActiveSignUp == true {
             
-            Name.hidden = !Name.hidden;
+            //Name.hidden = !Name.hidden;
+            UniName.hidden = !UniName.hidden;
+            Gender.hidden = !Gender.hidden;
+            WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
+            Men.hidden = !Men.hidden;
+            Women.hidden = !Women.hidden;
+            InterestSwitch.hidden = !InterestSwitch.hidden;
+            ConfirmPassword.hidden = !ConfirmPassword.hidden;
+            
             
             
          SignUpLogin.setTitle("Log In", forState: UIControlState.Normal)
@@ -183,7 +212,16 @@ class ViewController: UIViewController
             
             
         } else {
-           Name.hidden = false
+            
+           // Name.hidden = false
+            UniName.hidden = !UniName.hidden;
+            Gender.hidden = !Gender.hidden;
+            WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
+            Men.hidden = !Men.hidden;
+            Women.hidden = !Women.hidden;
+            InterestSwitch.hidden = !InterestSwitch.hidden;
+            ConfirmPassword.hidden = !ConfirmPassword.hidden;
+            
           
             SignUpLogin.setTitle("Sign Up", forState: UIControlState.Normal)
 
@@ -196,23 +234,10 @@ class ViewController: UIViewController
             
             
             ActiveSignUp = true
-   
-            //Remove Text Fields
-
-                
-            
-                
-            
-
-        
         }
         
         
-        
-        
     }
-
-    
 
     
     override func viewDidLoad() {
@@ -224,7 +249,15 @@ class ViewController: UIViewController
             
         if ActiveSignUp == true {
             
-            Name.hidden = !Name.hidden;
+           // Name.hidden = !Name.hidden;
+            UniName.hidden = !UniName.hidden;
+            Gender.hidden = !Gender.hidden;
+            WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
+            Men.hidden = !Men.hidden;
+            Women.hidden = !Women.hidden;
+            InterestSwitch.hidden = !InterestSwitch.hidden;
+            ConfirmPassword.hidden = !ConfirmPassword.hidden;
+            
             
             SignUpLogin.setTitle("Log In", forState: UIControlState.Normal)
             
@@ -238,7 +271,15 @@ class ViewController: UIViewController
             
         } else {
             
-            Name.hidden = false
+           // Name.hidden = false
+            UniName.hidden = !UniName.hidden;
+            Gender.hidden = !Gender.hidden;
+            WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
+            Men.hidden = !Men.hidden;
+            Women.hidden = !Women.hidden;
+            InterestSwitch.hidden = !InterestSwitch.hidden;
+            ConfirmPassword.hidden = !ConfirmPassword.hidden;
+            
             
             SignUpLogin.setTitle("Sign Up", forState: UIControlState.Normal)
             
