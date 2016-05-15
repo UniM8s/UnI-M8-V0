@@ -185,7 +185,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         
             
     
-     //Email Text Field Constraints - University Email only
+     //Email Text Field Constraints - University Email only - ., uni, student, uniname  + ac.uk, fr, edu.au, ....)
             
             let validLogin = isValidEmail(UniversityEmail.text!)
             if validLogin {
@@ -196,7 +196,7 @@ class ViewController: UIViewController, UITextFieldDelegate
     }
     
     func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[ ., uni, student,coventry,  ]+\\.[ ac.uk, fr, edu.au, edu, ca ]{2,64}"
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[ ., uni, student,coventry,pisspisspiss  ]+\\.[ ac.uk, fr, edu.au, edu, ca ]{2,64}"
         
         
         let range = testStr.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
