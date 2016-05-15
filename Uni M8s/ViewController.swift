@@ -196,7 +196,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         
         if ActiveSignUp == true {
             
-           // UniversityEmail.hidden = !Name.hidden;
+            Name.hidden = !Name.hidden;
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -221,7 +221,7 @@ class ViewController: UIViewController, UITextFieldDelegate
             
         } else {
             
-            //UniversityEmail.hidden = false
+            Name.hidden = false
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -257,7 +257,7 @@ class ViewController: UIViewController, UITextFieldDelegate
             
         if ActiveSignUp == true {
             
-           // UniversityEmail.hidden = !Name.hidden;
+            Name.hidden = !Name.hidden;
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -279,7 +279,7 @@ class ViewController: UIViewController, UITextFieldDelegate
             
         } else {
             
-           // UniversityEmail.hidden = false
+            Name.hidden = false
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
