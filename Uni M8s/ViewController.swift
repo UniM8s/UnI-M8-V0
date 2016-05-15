@@ -76,7 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate
             
             
             
-            if  Name.text == "" || Password.text == ""  {
+            if  UniversityEmail.text == "" || Password.text == ""  {
             
             displayAlert("Error In Form", message: "oops! Please enter a valid university email, and password")
             
@@ -101,10 +101,12 @@ class ViewController: UIViewController, UITextFieldDelegate
                 
                 
             let user = PFUser()
-            user.username = Name.text // UNI_EMAIL
+                    
+            user.username = Name.text
+            user.username = UniversityEmail.text // UNI_EMAIL
             user.password = Password.text
             user.email = UniversityEmail.text // NAME
-            
+                    
             
             user.signUpInBackgroundWithBlock({ (success, error) in
                 
@@ -144,8 +146,10 @@ class ViewController: UIViewController, UITextFieldDelegate
                 } else {
                     
                 
-                PFUser.logInWithUsernameInBackground(Name.text!, password: Password.text!, block:
+                PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
                         { (user,error) -> Void in
+                            
+                            
                             
                     self.activityIndicator.stopAnimating()
                     UIApplication.sharedApplication().endIgnoringInteractionEvents()
@@ -192,7 +196,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         
         if ActiveSignUp == true {
             
-            UniversityEmail.hidden = !Name.hidden;
+           // UniversityEmail.hidden = !Name.hidden;
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -217,7 +221,7 @@ class ViewController: UIViewController, UITextFieldDelegate
             
         } else {
             
-            UniversityEmail.hidden = false
+            //UniversityEmail.hidden = false
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -253,7 +257,7 @@ class ViewController: UIViewController, UITextFieldDelegate
             
         if ActiveSignUp == true {
             
-            UniversityEmail.hidden = !Name.hidden;
+           // UniversityEmail.hidden = !Name.hidden;
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
@@ -275,7 +279,7 @@ class ViewController: UIViewController, UITextFieldDelegate
             
         } else {
             
-            UniversityEmail.hidden = false
+           // UniversityEmail.hidden = false
             UniName.hidden = !UniName.hidden;
             Gender.hidden = !Gender.hidden;
             WhoAreYouInt.hidden = !WhoAreYouInt.hidden;
