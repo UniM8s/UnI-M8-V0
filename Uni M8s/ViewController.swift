@@ -185,9 +185,29 @@ class ViewController: UIViewController, UITextFieldDelegate
         
             
     
-                
-            }
+     //Email Text Field Constraints - University Email only
             
+            let validLogin = isValidEmail(UniversityEmail.text!)
+            if validLogin {
+                print("User entered valid input")
+            } else {
+                print("Invalid email address")
+            }
+    }
+    
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[uni.coventry, ]+\\.[ ac.uk, fr, edu.au, edu, ca ]{2,64}"
+        
+        
+        let range = testStr.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
+        let result = range != nil ? true : false
+        return result
+    }
+            
+            
+            
+                
+    
 
     
     @IBAction func Login(sender: AnyObject) {
