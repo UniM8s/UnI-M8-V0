@@ -196,7 +196,7 @@ class ViewController: UIViewController, UITextFieldDelegate
     }
     
     func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[ ., uni, student,coventry,  ]+\\.[ ac.uk, fr, edu.au, edu, ca ]{2,64}"
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[ ., uni, student,coventry,  ]+\\.[ ac.uk, fr, edu.au, edu, ca, shit shit shit fuck piss ]{2,64}"
         
         
         let range = testStr.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
