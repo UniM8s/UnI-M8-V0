@@ -185,7 +185,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         
             
     
-     //Email Text Field Constraints - University Email only
+     //Email Text Field Constraints - University Email only - ., uni, student, uniname  + ac.uk, fr, edu.au, ....)
             
             let validLogin = isValidEmail(UniversityEmail.text!)
             if validLogin {
