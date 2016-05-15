@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewController: UIViewController
+class ViewController: UIViewController, UITextFieldDelegate
 {
     var ActiveSignUp = true
 
@@ -315,7 +315,37 @@ class ViewController: UIViewController
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-                    }}
+                    }
+
+
+    //Hide Keyboard Code
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        Name.resignFirstResponder()
+        UniversityEmail.resignFirstResponder()
+        Password.resignFirstResponder()
+        ConfirmPassword.resignFirstResponder()
+        UniName.resignFirstResponder()
+        Gender.resignFirstResponder()
+        
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        Name.resignFirstResponder()
+        UniversityEmail.resignFirstResponder()
+        Password.resignFirstResponder()
+        ConfirmPassword.resignFirstResponder()
+        UniName.resignFirstResponder()
+        Gender.resignFirstResponder()
+        
+        return true
+    }
+    
+
+
+
+}
 
 
 
