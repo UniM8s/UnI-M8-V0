@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" red="0.57817624560000003" green="0.94374406700000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VR-na-jrV">
-                                <rect key="frame" x="262" y="547" width="70" height="33.5"/>
+                                <rect key="frame" x="246" y="544" width="70" height="33.5"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="Log in ">
                                     <color key="titleColor" red="0.56554526090000001" green="0.1860924363" blue="0.7254902124" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,6 +128,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrH-b4-v40">
+                                <rect key="frame" x="126" y="588" width="123" height="30"/>
+                                <state key="normal" title="Forgot Password?"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3I-Sp-dhl">
+                                <rect key="frame" x="126" y="637" width="135" height="30"/>
+                                <state key="normal" title="Terms &amp; Conditions"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ou-qW-3mO">
+                                <rect key="frame" x="139" y="611" width="95" height="30"/>
+                                <state key="normal" title="Privacy Policy"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
