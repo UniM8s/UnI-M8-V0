@@ -10,9 +10,13 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewController: UIViewController, UITextFieldDelegate
+class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate
 {
     var ActiveSignUp = true
+    
+    var LogInController = PFLogInViewController.self()
+    var SignUpController = PFSignUpViewController!.self()
+    
 
     @IBOutlet var Name: UITextField! //IMPORTANT NOTES ======> Rename UNI-EMAIL - Restoration ID
     
@@ -327,13 +331,34 @@ class ViewController: UIViewController, UITextFieldDelegate
 
     override func viewDidAppear(animated: Bool) {
         
+        super.viewDidAppear(animated)
+        
+        
        if PFUser.currentUser() != nil {
-            self.performSegueWithIdentifier("login", sender: self)
+        
+            self.LogInController = PFLogInViewController()
+            self.LogInController.delegate = self
+            self.LogInController.fields = [.UsernameAndPassword, .LogInButton, .SignUpButton, .PasswordForgotten, .DismissButton]
+        
+            self.SignUpController = PFSignUpViewController()
+            self.SignUpController.delegate! = self
+            self.LogInController.signUpController = self.SignUpController
+        
+        self.presentViewController(self.LogInController, animated: true, completion: nil)
+        
+        
+        
+        
+           self.performSegueWithIdentifier("login", sender: self)
+        
+        
+        } else {
             
+        
         
     
         
-    }
+       }
     }
     
     override func didReceiveMemoryWarning() {
@@ -366,11 +391,21 @@ class ViewController: UIViewController, UITextFieldDelegate
         return true
     }
     
-
+    func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username:String, password: String) -> Bool {
+        
+        if !username.isEmpty && !password.isEmpty
+        {
+            return true
+            
+        }
+            else
+        {
+            return false
+    }
 
 
 }
 
 
-
+}
 
