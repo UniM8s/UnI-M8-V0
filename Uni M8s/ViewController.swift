@@ -14,8 +14,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
 {
     var ActiveSignUp = true
     
-    var LogInController = PFLogInViewController.self()
-    var SignUpController = PFSignUpViewController!.self()
+     var LogInController = PFLogInViewController.self()
+     var SignUpController = PFSignUpViewController.self()
     
 
     @IBOutlet var Name: UITextField! //IMPORTANT NOTES ======> Rename UNI-EMAIL - Restoration ID
@@ -336,12 +336,14 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         
        if PFUser.currentUser() != nil {
         
+         self.performSegueWithIdentifier("login", sender: self)
+        
             self.LogInController = PFLogInViewController()
             self.LogInController.delegate = self
             self.LogInController.fields = [.UsernameAndPassword, .LogInButton, .SignUpButton, .PasswordForgotten, .DismissButton]
         
             self.SignUpController = PFSignUpViewController()
-            self.SignUpController.delegate! = self
+            self.SignUpController.delegate = self
             self.LogInController.signUpController = self.SignUpController
         
         self.presentViewController(self.LogInController, animated: true, completion: nil)
@@ -349,17 +351,40 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         
         
         
-           self.performSegueWithIdentifier("login", sender: self)
+        
         
         
         } else {
             
         
+        PFUser.currentUser()?.fetchInBackgroundWithBlock({ (object, error) in
+            
+            let isEmailVerified = PFUser.currentUser()?.objectForKey("EmailVerified")?.boolValue
+            
+            if isEmailVerified == true
+            
+            {
+              
+            
+                self.UniversityEmail.text = "Email has been verified"
+                
+                
+            }
+            else
+            {
+               
+                
+                self.UniversityEmail.text = "Email is not verified"
+            
+            }
         
-    
         
-       }
+            
+        })
+        
+        
     }
+}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -405,7 +430,52 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
 
 
 }
+ 
+    func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        
+    self.dismissViewControllerAnimated(true, completion: nil)
+    
+    }
+
+    func logInViewController(logInController: PFLogInViewController, didFailToLgInWithError error: NSError?) {
+        print("Failed to login")
+    }
+        
+        //Mark: Sign up
+        
+    func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
+        print("Failed to sign up......")
+}
+    
+    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
+        print("Canceled")
+    }
+    
+
 
 
 }
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 

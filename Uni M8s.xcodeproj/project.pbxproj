@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		69D0A7601CE56201004FB9F1 /* SearchProfileChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */; };
+		69D0A7621CEA8945004FB9F1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7611CEA8945004FB9F1 /* Social.framework */; };
+		69D0A7641CEA897D004FB9F1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7631CEA897D004FB9F1 /* Accounts.framework */; };
+		69D0A7661CEA89B1004FB9F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7651CEA89B1004FB9F1 /* UIKit.framework */; };
+		69D0A7681CEA89DC004FB9F1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7671CEA89DC004FB9F1 /* ParseUI.framework */; };
+		69D0A76A1CEA89E7004FB9F1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7691CEA89E7004FB9F1 /* ParseFacebookUtils.framework */; };
+		69D0A76C1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A76B1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework */; };
 		E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */; };
 		E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9F1CD9533600EBAECB /* ViewController.swift */; };
 		E00E3BA31CD9533600EBAECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00E3BA11CD9533600EBAECB /* Main.storyboard */; };
@@ -51,6 +57,12 @@
 
 /* Begin PBXFileReference section */
 		69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProfileChatTableViewController.swift; sourceTree = "<group>"; };
+		69D0A7611CEA8945004FB9F1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		69D0A7631CEA897D004FB9F1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		69D0A7651CEA89B1004FB9F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		69D0A7671CEA89DC004FB9F1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Parse.FrameworkSDK/ParseUI.framework; sourceTree = "<group>"; };
+		69D0A7691CEA89E7004FB9F1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Parse.FrameworkSDK/ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		69D0A76B1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Parse.FrameworkSDK/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		E00E3B9A1CD9533600EBAECB /* Uni M8s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uni M8s.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E00E3B9F1CD9533600EBAECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +99,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D0A7681CEA89DC004FB9F1 /* ParseUI.framework in Frameworks */,
+				69D0A7661CEA89B1004FB9F1 /* UIKit.framework in Frameworks */,
+				69D0A7641CEA897D004FB9F1 /* Accounts.framework in Frameworks */,
+				69D0A7621CEA8945004FB9F1 /* Social.framework in Frameworks */,
 				E04F61C01CE7DADC0029160C /* libstdc++.6.0.9.tbd in Frameworks */,
+				69D0A76A1CEA89E7004FB9F1 /* ParseFacebookUtils.framework in Frameworks */,
 				E04F61C11CE7DADC0029160C /* libstdc++.6.tbd in Frameworks */,
 				E00E3BE11CD95F8800EBAECB /* libsqlite3.tbd in Frameworks */,
 				E00E3BDF1CD95F7800EBAECB /* libz.tbd in Frameworks */,
@@ -96,6 +113,7 @@
 				E00E3BDB1CD95F4600EBAECB /* Security.framework in Frameworks */,
 				E00E3BD91CD95F3900EBAECB /* StoreKit.framework in Frameworks */,
 				E00E3BD71CD95F2F00EBAECB /* CoreGraphics.framework in Frameworks */,
+				69D0A76C1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				E00E3C001CD9656A00EBAECB /* Parse.framework in Frameworks */,
 				E00E3BD51CD95F2600EBAECB /* AudioToolbox.framework in Frameworks */,
 				E00E3BD31CD95F1C00EBAECB /* QuartzCore.framework in Frameworks */,
@@ -178,6 +196,12 @@
 		E00E3BE21CD95FA500EBAECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69D0A76B1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework */,
+				69D0A7691CEA89E7004FB9F1 /* ParseFacebookUtils.framework */,
+				69D0A7671CEA89DC004FB9F1 /* ParseUI.framework */,
+				69D0A7651CEA89B1004FB9F1 /* UIKit.framework */,
+				69D0A7631CEA897D004FB9F1 /* Accounts.framework */,
+				69D0A7611CEA8945004FB9F1 /* Social.framework */,
 				E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */,
 				E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */,
 				E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */,
