@@ -114,6 +114,10 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             
             user.signUpInBackgroundWithBlock({ (success, error) in
                 
+                
+               // (succeeded: Bool, error: NSError?) -> Void in
+                
+                
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
@@ -123,6 +127,19 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                     
                     self.performSegueWithIdentifier("Login", sender: self)
                     
+                    // User needs to verify email address before continuing
+                    let alertController = UIAlertController(title: "Email address verification",
+                        message: "We have sent you an email that contains a link - you must click this link before you can continue.",
+                        preferredStyle: UIAlertControllerStyle.Alert
+                    )
+                    alertController.addAction(UIAlertAction(title: "OKAY",
+                        style: UIAlertActionStyle.Default,
+                        handler: { alertController in self.LogInController})
+                    )
+                    // Display alert
+                    self.presentViewController(alertController, animated: true, completion: nil)
+
+                    
                     
                     
                 } else {
@@ -130,6 +147,12 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                     if let errorString = error!.userInfo["error"] as? String {
                         
                         errorMessage = errorString
+                        
+                        self.activityIndicator.stopAnimating()
+                        
+                        if let message: AnyObject = error!.userInfo["error"] {
+                            self.UniversityEmail.text = "\(message)"
+                        }
                         
                 
                    }
@@ -152,6 +175,33 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
                 PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
                         { (user,error) -> Void in
+                            
+                            if user!["emailVerified"] as! Bool == true {
+                                dispatch_async(dispatch_get_main_queue()) {
+                                    self.performSegueWithIdentifier(
+                                        "login",
+                                        sender: self
+                                    )
+                                }
+                            } else {
+                                // User needs to verify email address before continuing
+                                let alertController = UIAlertController(
+                                    title: "Email address verification",
+                                    message: "We have sent you an email that contains a link - you must click this link before you can continue.",
+                                    preferredStyle: UIAlertControllerStyle.Alert
+                                )
+                                alertController.addAction(UIAlertAction(title: "OKAY",
+                                    style: UIAlertActionStyle.Default,
+                                    handler: { alertController in self.SignUpController})
+                                )
+                                // Display alert
+                                self.presentViewController(
+                                    alertController,
+                                    animated: true,
+                                    completion: nil
+                                )
+                            }
+                
                             
                             
                             
