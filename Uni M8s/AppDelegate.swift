@@ -22,6 +22,7 @@ import Parse
         
         // Override point for customization after application launch.
         return true
+    
     }
 
     func applicationWillResignActive(application: UIApplication) {

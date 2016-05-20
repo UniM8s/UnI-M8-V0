@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="-399.5" y="-922.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password View Controller-->
         <scene sceneID="Ha6-39-nYb">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="B6D-sa-P7Y" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="B6D-sa-P7Y" customClass="ForgotPasswordViewController" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t2H-YI-RY7"/>
                         <viewControllerLayoutGuide type="bottom" id="ZfO-f4-no5"/>
@@ -201,11 +201,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your University Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWK-9S-sYK">
-                                <rect key="frame" x="20" y="101" width="335" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ass-Dp-pMr">
                                 <rect key="frame" x="115" y="139" width="144" height="42"/>
                                 <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,13 +219,24 @@
                                     <color key="titleShadowColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="backToLoginButtonTapped:" destination="B6D-sa-P7Y" eventType="touchUpInside" id="7NR-KF-Xpl"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="gyd-YW-tWl"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="FogotPassword" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your University Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWK-9S-sYK">
+                                <rect key="frame" x="20" y="101" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.70980392156862748" green="0.96862745098039216" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="PasswordResetEmail" destination="MWK-9S-sYK" id="b3G-gz-K9Q"/>
+                        <outlet property="passwordResetEmail" destination="MWK-9S-sYK" id="OTP-Sy-XbV"/>
+                        <outlet property="yourUniversityEmailtextField" destination="MWK-9S-sYK" id="3lL-tm-wVc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51u-gm-aJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

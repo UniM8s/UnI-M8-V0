@@ -14,6 +14,7 @@
 		69D0A7681CEA89DC004FB9F1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7671CEA89DC004FB9F1 /* ParseUI.framework */; };
 		69D0A76A1CEA89E7004FB9F1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7691CEA89E7004FB9F1 /* ParseFacebookUtils.framework */; };
 		69D0A76C1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A76B1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework */; };
+		69D0A7741CEE639D004FB9F1 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D0A7731CEE639D004FB9F1 /* ForgotPasswordViewController.swift */; };
 		E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */; };
 		E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9F1CD9533600EBAECB /* ViewController.swift */; };
 		E00E3BA31CD9533600EBAECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00E3BA11CD9533600EBAECB /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		69D0A7671CEA89DC004FB9F1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Parse.FrameworkSDK/ParseUI.framework; sourceTree = "<group>"; };
 		69D0A7691CEA89E7004FB9F1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Parse.FrameworkSDK/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		69D0A76B1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Parse.FrameworkSDK/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		69D0A7731CEE639D004FB9F1 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		E00E3B9A1CD9533600EBAECB /* Uni M8s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uni M8s.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E00E3B9F1CD9533600EBAECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				E00E3BA41CD9533600EBAECB /* Assets.xcassets */,
 				E00E3BA61CD9533600EBAECB /* LaunchScreen.storyboard */,
 				E00E3BA91CD9533600EBAECB /* Info.plist */,
+				69D0A7731CEE639D004FB9F1 /* ForgotPasswordViewController.swift */,
 			);
 			path = "Uni M8s";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D0A7741CEE639D004FB9F1 /* ForgotPasswordViewController.swift in Sources */,
 				E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */,
 				69D0A7601CE56201004FB9F1 /* SearchProfileChatTableViewController.swift in Sources */,
 				E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */,

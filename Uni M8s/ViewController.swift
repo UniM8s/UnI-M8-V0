@@ -81,12 +81,16 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             
             
             if  UniversityEmail.text == "" || Password.text == ""  {
+                
+                
             
             displayAlert("Error In Form", message: "oops! Please enter a valid university email, and password")
             
             
             
             } else {
+                
+                
         
             activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
             activityIndicator.center = self.view.center
@@ -99,6 +103,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
             var errorMessage = "oops please try again"
                 
+            
+            
            
                 
                 if ActiveSignUp == true {
@@ -115,8 +121,6 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             user.signUpInBackgroundWithBlock({ (success, error) in
                 
                 
-               // (succeeded: Bool, error: NSError?) -> Void in
-                
                 
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
@@ -124,23 +128,30 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 if error == nil {
                  
                     // Signup was successful
+                
                     
-                    self.performSegueWithIdentifier("Login", sender: self)
                     
-                    // User needs to verify email address before continuing
-                    let alertController = UIAlertController(title: "Email address verification",
-                        message: "We have sent you an email that contains a link - you must click this link before you can continue.",
+                    // Build the terms and conditions alert
+                    let alertController = UIAlertController(title: "Agree to terms and conditions",
+                        message: "Click I AGREE to signal that you agree to the End User Licence Agreement.",
                         preferredStyle: UIAlertControllerStyle.Alert
                     )
-                    alertController.addAction(UIAlertAction(title: "OKAY",
+                    alertController.addAction(UIAlertAction(title: "I AGREE",
                         style: UIAlertActionStyle.Default,
-                        handler: { alertController in self.LogInController})
+                        handler: { alertController in self.SignUpController})
+                        
+                        
+                        
                     )
+                    alertController.addAction(UIAlertAction(title: "I do NOT agree",
+                        style: UIAlertActionStyle.Default,
+                        handler: nil)
+                    )
+                    
                     // Display alert
                     self.presentViewController(alertController, animated: true, completion: nil)
-
                     
-                    
+                   
                     
                 } else {
                     
@@ -163,9 +174,6 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             }
                 
                 })
-                    
-                    
-                    
                     
                     
                     
@@ -381,12 +389,12 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
 
     override func viewDidAppear(animated: Bool) {
         
-        super.viewDidAppear(animated)
         
+        super.viewDidAppear(animated)
+
         
        if PFUser.currentUser() != nil {
-        
-         self.performSegueWithIdentifier("login", sender: self)
+      
         
             self.LogInController = PFLogInViewController()
             self.LogInController.delegate = self
