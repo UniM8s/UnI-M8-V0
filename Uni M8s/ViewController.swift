@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate
+class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControllerDelegate,PFSignUpViewControllerDelegate
 {
     var ActiveSignUp = true
     
