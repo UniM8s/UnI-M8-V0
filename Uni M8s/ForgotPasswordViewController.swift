@@ -14,14 +14,45 @@ import ParseUI
 class ForgotPasswordViewController: UIViewController {
 
     
-    
     @IBOutlet weak var yourUniversityEmailtextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func RecoverPassButton(sender: UIButton) {
+        
+        let ForgotemailVar = yourUniversityEmailtextField.text
+        PFUser.requestPasswordResetForEmailInBackground(ForgotemailVar!) { (success: Bool, error: NSError?) -> Void in
+            
+            if (error == nil) {
+                
+                let alertView = UIAlertController(title: "Password recovery e-mail sent", message: "Please check your e-mail inbox for recovery", preferredStyle: .Alert)
+                alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                self.presentViewController(alertView, animated: true, completion: nil)
+                
+            }else {
+                
+                let alertView = UIAlertController(title: "Could not found your e-mail", message: "There is no such e-mail in our database", preferredStyle: .Alert)
+                alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                self.presentViewController(alertView, animated: true, completion: nil)
+                
+            }
+            
+            
+            
+            
+        }
+        
+        
+        
+    
+    
+    
+    
+
+    
+    }
+
 
         // Do any additional setup after loading the view.
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,18 +62,10 @@ class ForgotPasswordViewController: UIViewController {
     
     
 
-    @IBAction func recoverButtonTapped(sender: AnyObject) {
         
-       
-            
         
-            
+    
 
-    
-        
-        
-    
-    }
     
     
     @IBAction func backToLoginButtonTapped(sender: AnyObject) {
@@ -52,6 +75,6 @@ class ForgotPasswordViewController: UIViewController {
         
     }
     
-    
-
 }
+
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -208,6 +208,9 @@
                                 <state key="normal" title="Recover Password">
                                     <color key="titleColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="RecoverPassButton:" destination="B6D-sa-P7Y" eventType="touchUpInside" id="ivW-2u-F5Q"/>
+                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6s-Co-5YR">
                                 <rect key="frame" x="0.0" y="594" width="375" height="73"/>
@@ -233,14 +236,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="PasswordResetEmail" destination="MWK-9S-sYK" id="b3G-gz-K9Q"/>
-                        <outlet property="passwordResetEmail" destination="MWK-9S-sYK" id="OTP-Sy-XbV"/>
                         <outlet property="yourUniversityEmailtextField" destination="MWK-9S-sYK" id="3lL-tm-wVc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51u-gm-aJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399.5" y="-68.5"/>
+            <point key="canvasLocation" x="-441.5" y="-122.5"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="yiI-bG-uQb">

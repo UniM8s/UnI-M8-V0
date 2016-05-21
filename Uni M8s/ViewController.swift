@@ -54,6 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
     
     @IBOutlet var Women: UILabel!
     
+    @IBOutlet var ForgotPassword: UIButton!
     
     
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
@@ -510,6 +511,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
     }
     
 
+    
+    
 
 
 }
