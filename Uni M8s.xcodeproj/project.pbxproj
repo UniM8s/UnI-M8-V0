@@ -167,13 +167,12 @@
 			children = (
 				E00E3C011CD9666100EBAECB /* Uni M8s-Bridging-Header.h */,
 				E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */,
-				E00E3B9F1CD9533600EBAECB /* ViewController.swift */,
-				69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */,
+				E098DD291CF095C900AC5421 /* LogIn & SignUp */,
 				E00E3BA11CD9533600EBAECB /* Main.storyboard */,
 				E00E3BA41CD9533600EBAECB /* Assets.xcassets */,
 				E00E3BA61CD9533600EBAECB /* LaunchScreen.storyboard */,
 				E00E3BA91CD9533600EBAECB /* Info.plist */,
-				69D0A7731CEE639D004FB9F1 /* ForgotPasswordViewController.swift */,
+				69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */,
 			);
 			path = "Uni M8s";
 			sourceTree = "<group>";
@@ -222,6 +221,15 @@
 				E00E3BCE1CD95F0900EBAECB /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E098DD291CF095C900AC5421 /* LogIn & SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				69D0A7731CEE639D004FB9F1 /* ForgotPasswordViewController.swift */,
+				E00E3B9F1CD9533600EBAECB /* ViewController.swift */,
+			);
+			name = "LogIn & SignUp";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
