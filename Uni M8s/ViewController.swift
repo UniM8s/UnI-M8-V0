@@ -106,7 +106,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
   
                 
                 if ActiveSignUp == true {
-                
+                    
                     let alertController = UIAlertController(title: "Agree To Terms & Condition to continue", message: "You will not be able to sign up to UNIM8's unless T&C's accepted. Please ensure you read the terms and conditions", preferredStyle: .Alert)
                     
                      //Create the actions
@@ -140,6 +140,9 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                      self.presentViewController(alertController, animated: true, completion: nil)
                     
                 
+                    
+                    
+                    
             let user = PFUser()
                     
             user.username = Name.text
@@ -151,9 +154,9 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             user.signUpInBackgroundWithBlock({ (success, error) in
                 
                 
-                
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                
                 
                 if error == nil {
                     
@@ -161,10 +164,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                  
                     //Signup was successful
                 
-                 
-                    
-                    
-                   
+              
                     
                 } else {
                     
@@ -196,9 +196,11 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
                         { (user,error) -> Void in
                             
-                    
+          
                             
-                            if user!["emailVerified"] as! Bool == true {
+                            if(PFUser.currentUser()!["emailVerified"].isEqual(1)){
+                                
+                                //if user["emailVerified"] as! Bool == true {
                                 dispatch_async(dispatch_get_main_queue()) {
                                     self.performSegueWithIdentifier(
                                         "login",
@@ -223,10 +225,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                                     completion: nil
                                 )
                             }
-                
                             
-                        
-                    
                     self.activityIndicator.stopAnimating()
                     UIApplication.sharedApplication().endIgnoringInteractionEvents()
                             
@@ -287,8 +286,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
 
     
     @IBAction func Login(sender: AnyObject) {
-       
-       
+        
         
         if ActiveSignUp == true {
             
@@ -341,6 +339,9 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         }
         
         
+        
+        
+        
     }
 
     
@@ -350,7 +351,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
    
 // Makes log in appear first
     
-            
+        
         if ActiveSignUp == true {
             
             Name.hidden = !Name.hidden;
