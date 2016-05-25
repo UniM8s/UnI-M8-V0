@@ -61,8 +61,24 @@ class ForgotPasswordViewController: UIViewController {
     
     
     
-
+    //Hide Keyboard Code
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
+      
+        yourUniversityEmailtextField.resignFirstResponder()
+      
+        
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+ 
+        yourUniversityEmailtextField.resignFirstResponder()
+    
+        
+        return true
+    }
+    
         
     
 
