@@ -5,6 +5,55 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Did Not Agree T&C VC-->
+        <scene sceneID="opw-BN-h4Q">
+            <objects>
+                <viewController title="Did Not Agree T&amp;C VC" id="qIg-bV-WuM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PnU-qY-wRM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dp3-NG-V8Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rfU-X6-n2k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13J-O4-ldF">
+                                <rect key="frame" x="0.0" y="337" width="375" height="67"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="tintColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="1" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Agree To Terms &amp; Conditions to Log In">
+                                    <color key="titleColor" red="0.90062735510488412" green="0.80061295610319905" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.86138391780000001" green="0.82597611100000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Agree2TermsSegue" id="Qx2-f7-aCC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4G-eM-LW6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="276"/>
+                                <mutableString key="text">Unfortunately, you can not complete you're UniM8's Sign up!!                                                                                                                                                                                                  If you agree to our terms and conditions you will be allowed access to log into UniM8's by clicking the button below.                                                                      If you would like to read the T's &amp; C's click the Terms &amp; Conditions button</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygn-ND-hEU">
+                                <rect key="frame" x="120" y="299" width="135" height="30"/>
+                                <state key="normal" title="Terms &amp; Conditions"/>
+                                <connections>
+                                    <segue destination="rv5-Gl-S4F" kind="show" identifier="DisgreeTCSegue" id="0rL-Yf-VuY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86138391779988321" green="0.82597611097282853" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr0-Ef-eAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409.5" y="-1803.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -186,11 +235,54 @@
                         <outlet property="WhoAreYouInt" destination="1vH-Oo-J2t" id="oUb-iL-zv5"/>
                         <outlet property="Women" destination="hGm-It-51p" id="YMw-rS-hLX"/>
                         <segue destination="zaA-17-CgC" kind="show" identifier="login" id="6L9-6L-fwY"/>
+                        <segue destination="qIg-bV-WuM" kind="show" identifier="DidNotAgreeTC" id="HQc-nd-LG4"/>
+                        <segue destination="pKz-pn-CzE" kind="show" identifier="Agreed2termsSegue" id="rdg-t2-JRr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-399.5" y="-922.5"/>
+        </scene>
+        <!--AgreedToTermsVC-->
+        <scene sceneID="HA6-5f-yt7">
+            <objects>
+                <viewController title="AgreedToTermsVC" id="pKz-pn-CzE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eC4-Ek-cIB"/>
+                        <viewControllerLayoutGuide type="bottom" id="1n6-Uw-Igy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xh7-eb-sHe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfa-oF-WQX">
+                                <rect key="frame" x="0.0" y="311" width="375" height="46"/>
+                                <color key="backgroundColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.79338801650000002" green="0.3978939923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="1" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="LOG IN!!">
+                                    <color key="titleColor" red="0.79338801645227108" green="0.39789399225254574" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.79338801645227108" green="0.39789399225254574" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="AgreedLogInButtonSegue" id="1lp-Yh-XPC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqr-1e-175">
+                                <rect key="frame" x="13" y="28" width="350" height="283"/>
+                                <string key="text">Congratulations!!! You have succefully sign up to UniM8's, have fun here are some rules to follow below, We have sent you an email so that you can verify your account</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.79338801650000002" green="0.3978939923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8418836489" green="0.97956196159999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSR-uh-2AV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-943.5" y="-1803.5"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="Ha6-39-nYb">
@@ -393,6 +485,7 @@
         <image name="UniICON" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="foc-Gu-qGq"/>
+        <segue reference="1lp-Yh-XPC"/>
+        <segue reference="0rL-Yf-VuY"/>
     </inferredMetricsTieBreakers>
 </document>

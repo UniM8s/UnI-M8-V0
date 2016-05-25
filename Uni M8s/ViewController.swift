@@ -113,16 +113,21 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                     let AgreeAction = UIAlertAction(title: "I AGREE", style: UIAlertActionStyle.Default) {
                       UIAlertAction in
                      NSLog("OK Pressed")
-                        self.performSegueWithIdentifier("toTCSegue", sender: self) //change to appropriate segue
+                        self.performSegueWithIdentifier("Agreed2termsSegue", sender: self) //change to appropriate segue
                         
                     }
                     let DisagreeAction = UIAlertAction(title: "I DO NOT AGREE", style: UIAlertActionStyle.Cancel) {
                       UIAlertAction in
                       NSLog("Cancel Pressed")
                         
-                
+                        
+                        self.performSegueWithIdentifier("DidNotAgreeTC", sender: self)
+               
                         
                             self.displayAlert("T&C", message: "You must agree to T&C before you can continue") //re-write sectionfor alert TC
+                        
+                        
+                        
                     }
                     
                   //  Add the actions
