@@ -80,7 +80,6 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         @IBAction func Signup(sender: AnyObject) {
             
             
-            
             if  UniversityEmail.text == "" || Password.text == ""  {
                 
                 
@@ -104,12 +103,37 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
             var errorMessage = "oops please try again"
                 
-            
-            
-           
+  
                 
                 if ActiveSignUp == true {
                 
+                    let alertController = UIAlertController(title: "Agree To Terms & Condition to continue", message: "You will not be able to sign up to UNIM8's unless T&C's accepted. Please ensure you read the terms and conditions", preferredStyle: .Alert)
+                    
+                     //Create the actions
+                    let AgreeAction = UIAlertAction(title: "I AGREE", style: UIAlertActionStyle.Default) {
+                      UIAlertAction in
+                     NSLog("OK Pressed")
+                        self.performSegueWithIdentifier("toTCSegue", sender: self) //change to appropriate segue
+                        
+                    }
+                    let DisagreeAction = UIAlertAction(title: "I DO NOT AGREE", style: UIAlertActionStyle.Cancel) {
+                      UIAlertAction in
+                      NSLog("Cancel Pressed")
+                        
+                
+                        
+                            self.displayAlert("T&C", message: "You must agree to T&C before you can continue") //re-write sectionfor alert TC
+                    }
+                    
+                  //  Add the actions
+                    alertController.addAction(AgreeAction)
+                    alertController.addAction(DisagreeAction)
+
+                    
+                    
+                   // Present the controller
+                     self.presentViewController(alertController, animated: true, completion: nil)
+                    
                 
             let user = PFUser()
                     
@@ -127,30 +151,13 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
                 if error == nil {
+                    
+                    
                  
-                    // Signup was successful
+                    //Signup was successful
                 
+                 
                     
-                    
-                    // Build the terms and conditions alert
-                    let alertController = UIAlertController(title: "Agree to terms and conditions",
-                        message: "Click I AGREE to signal that you agree to the End User Licence Agreement.",
-                        preferredStyle: UIAlertControllerStyle.Alert
-                    )
-                    alertController.addAction(UIAlertAction(title: "I AGREE",
-                        style: UIAlertActionStyle.Default,
-                        handler: { alertController in self.SignUpController})
-                        
-                        
-                        
-                    )
-                    alertController.addAction(UIAlertAction(title: "I do NOT agree",
-                        style: UIAlertActionStyle.Default,
-                        handler: nil)
-                    )
-                    
-                    // Display alert
-                    self.presentViewController(alertController, animated: true, completion: nil)
                     
                    
                     
@@ -176,14 +183,15 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
                 })
                     
-                    
-                    
+                
                     
                 } else {
                     
                 
                 PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
                         { (user,error) -> Void in
+                            
+                    
                             
                             if user!["emailVerified"] as! Bool == true {
                                 dispatch_async(dispatch_get_main_queue()) {
@@ -212,8 +220,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                             }
                 
                             
-                            
-                            
+                        
+                    
                     self.activityIndicator.stopAnimating()
                     UIApplication.sharedApplication().endIgnoringInteractionEvents()
                             
@@ -243,8 +251,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
     
                     })
         
-        
-                }}
+                    
+                    }}
         
             
     
@@ -396,22 +404,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         
        if PFUser.currentUser() != nil {
       
-        
-            self.LogInController = PFLogInViewController()
-            self.LogInController.delegate = self
-            self.LogInController.fields = [.UsernameAndPassword, .LogInButton, .SignUpButton, .PasswordForgotten, .DismissButton]
-        
-            self.SignUpController = PFSignUpViewController()
-            self.SignUpController.delegate = self
-            self.LogInController.signUpController = self.SignUpController
-        
-        self.presentViewController(self.LogInController, animated: true, completion: nil)
-        
-        
-        
-        
-        
-        
+        //Nothing Happens
         
         } else {
             

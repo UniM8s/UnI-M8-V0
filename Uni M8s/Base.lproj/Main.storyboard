@@ -362,6 +362,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prw-kQ-kOp">
+                                <rect key="frame" x="0.0" y="594" width="375" height="73"/>
+                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
+                                <state key="normal" title="BACK TO LOGIN">
+                                    <color key="titleColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToLoginButtonTapped:" destination="B6D-sa-P7Y" eventType="touchUpInside" id="L7I-ea-noc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="a5d-Gs-VHD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
