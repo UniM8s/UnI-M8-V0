@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="-409.5" y="-1803.5"/>
         </scene>
-        <!--View Controller-->
+        <!--login/SignUpVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="login/SignUpVC" modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -218,7 +218,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ConfirmPassword" destination="nwl-g5-034" id="xu6-2Y-4Ji"/>
                         <outlet property="Gender" destination="OcD-ov-8og" id="cq5-v0-ty3"/>
@@ -343,15 +342,15 @@
             <objects>
                 <tableViewController modalTransitionStyle="crossDissolve" id="tUM-LX-iWN" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uwe-gj-zVR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UrP-jv-2LK">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UrP-jv-2LK" id="sm1-tg-pZx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -485,7 +484,7 @@
         <image name="UniICON" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1lp-Yh-XPC"/>
-        <segue reference="0rL-Yf-VuY"/>
+        <segue reference="foc-Gu-qGq"/>
+        <segue reference="g3Y-sA-xlu"/>
     </inferredMetricsTieBreakers>
 </document>
