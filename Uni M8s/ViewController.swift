@@ -144,8 +144,9 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                     
                     
             let user = PFUser()
-                    
-            user.username = Name.text
+               
+            user["names"] = Name.text
+                        
             user.username = UniversityEmail.text // UNI_EMAIL
             user.password = Password.text
             user.email = UniversityEmail.text // NAME
