@@ -235,12 +235,13 @@
                         <outlet property="Women" destination="hGm-It-51p" id="YMw-rS-hLX"/>
                         <segue destination="qIg-bV-WuM" kind="show" identifier="DidNotAgreeTC" id="HQc-nd-LG4"/>
                         <segue destination="pKz-pn-CzE" kind="show" identifier="Agreed2termsSegue" id="rdg-t2-JRr"/>
-                        <segue destination="ALl-Kn-vcQ" kind="show" identifier="login" id="FaY-FF-Tgt"/>
+                        <segue destination="ALl-Kn-vcQ" kind="show" identifier="loginPF" id="FaY-FF-Tgt"/>
+                        <segue destination="CEP-LY-QXN" kind="show" identifier="login" id="vdi-TK-eZq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399.5" y="-922.5"/>
+            <point key="canvasLocation" x="-469.5" y="-906.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="R8w-Sw-PgN">
@@ -258,7 +259,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZZ-oa-E6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57.5" y="-922.5"/>
+            <point key="canvasLocation" x="73.5" y="-906.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Rjb-ZO-pGG">
@@ -267,15 +268,15 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" id="4cT-Ab-jN9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kdu-qL-6EH">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kdu-qL-6EH">
                             <size key="itemSize" width="106" height="106"/>
-                            <size key="headerReferenceSize" width="50" height="254"/>
+                            <size key="headerReferenceSize" width="43" height="268"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Pic Cell" reuseIdentifier="PicCell" id="XBO-1D-HIe" customClass="PostedPics" customModule="Uni_M8s" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="254" width="106" height="106"/>
+                                <rect key="frame" x="0.0" y="332" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
@@ -293,7 +294,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderInfo" id="L3f-dH-eib" customClass="HeaderInfoView" customModule="Uni_M8s" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="254"/>
+                            <rect key="frame" x="0.0" y="64" width="375" height="268"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUN-BO-9wB">
@@ -308,7 +309,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="ProfileImage" image="UniICON" highlightedImage="PURPLE" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-IE-z8e">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="ProfileImage" highlightedImage="PURPLE" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-IE-z8e">
                                     <rect key="frame" x="20" y="20" width="120" height="120"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname and Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbX-zk-vp9">
@@ -358,7 +359,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7R-bu-OEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969.5" y="-922.5"/>
+            <point key="canvasLocation" x="73.5" y="-1738.5"/>
         </scene>
         <!--AgreedToTermsVC-->
         <scene sceneID="HA6-5f-yt7">
@@ -556,9 +557,16 @@
                     <tabBarItem key="tabBarItem" title="Item" id="LFh-CG-PNP"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rat-Wv-Jep">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" verticalHuggingPriority="220" verticalCompressionResistancePriority="250" id="rat-Wv-Jep">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.79641968445617795" green="0.70707330164910442" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.79641968445617795" green="0.70707330164910442" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.091727466361921764" green="0.62394445645720464" blue="0.77510016025641026" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="0.091727466361921764" green="0.62394445645720464" blue="0.77510016025641026" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="1"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -567,7 +575,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGO-E4-kRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526.5" y="-922.5"/>
+            <point key="canvasLocation" x="524.5" y="-906.5"/>
         </scene>
     </scenes>
     <resources>
@@ -577,8 +585,8 @@
         <image name="UniICON" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="foc-Gu-qGq"/>
+        <segue reference="Qx2-f7-aCC"/>
         <segue reference="g3Y-sA-xlu"/>
-        <segue reference="FaY-FF-Tgt"/>
+        <segue reference="hzj-HU-xad"/>
     </inferredMetricsTieBreakers>
 </document>

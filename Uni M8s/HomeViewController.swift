@@ -15,16 +15,20 @@ class HomeViewController: UICollectionViewController {
     var refreshPage : UIRefreshControl!
     
     // size of page 
-    var page : Int = 10
+    var page : Int = 1
     
     var UUIDArray = [String]()
     var PictureArray = [PFFile]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collectionView?.backgroundColor = .whiteColor()
         
+        // always vertical scroll
+        self.collectionView?.alwaysBounceVertical = true
+
+        collectionView?.backgroundColor = .lightGrayColor()
+        // set navigation bar title to current user
+        self.navigationItem.title = "UNIM8"
      
         refreshPage = UIRefreshControl()
         refreshPage.attributedTitle = NSAttributedString(string: "refreshPage")
@@ -36,7 +40,7 @@ class HomeViewController: UICollectionViewController {
     
     func refresh(sender:AnyObject) {
         self.collectionView?.reloadData()
-        
+         refreshPage.endRefreshing()
         
     }
 
@@ -66,12 +70,6 @@ class HomeViewController: UICollectionViewController {
         
         
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionView!.reloadData()
-    }
-    
     
     
         override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
