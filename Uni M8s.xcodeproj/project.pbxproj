@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69C730221CFA3ABB001E409C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C730211CFA3ABB001E409C /* HomeViewController.swift */; };
+		69C730241CFA3B0C001E409C /* HeaderInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C730231CFA3B0C001E409C /* HeaderInfoView.swift */; };
+		69C730261CFA3EF4001E409C /* PostedPics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C730251CFA3EF4001E409C /* PostedPics.swift */; };
 		69D0A7601CE56201004FB9F1 /* SearchProfileChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */; };
 		69D0A7621CEA8945004FB9F1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7611CEA8945004FB9F1 /* Social.framework */; };
 		69D0A7641CEA897D004FB9F1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7631CEA897D004FB9F1 /* Accounts.framework */; };
@@ -57,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69C730211CFA3ABB001E409C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		69C730231CFA3B0C001E409C /* HeaderInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderInfoView.swift; sourceTree = "<group>"; };
+		69C730251CFA3EF4001E409C /* PostedPics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostedPics.swift; sourceTree = "<group>"; };
 		69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProfileChatTableViewController.swift; sourceTree = "<group>"; };
 		69D0A7611CEA8945004FB9F1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		69D0A7631CEA897D004FB9F1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -173,6 +179,9 @@
 				E00E3BA61CD9533600EBAECB /* LaunchScreen.storyboard */,
 				E00E3BA91CD9533600EBAECB /* Info.plist */,
 				69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */,
+				69C730211CFA3ABB001E409C /* HomeViewController.swift */,
+				69C730231CFA3B0C001E409C /* HeaderInfoView.swift */,
+				69C730251CFA3EF4001E409C /* PostedPics.swift */,
 			);
 			path = "Uni M8s";
 			sourceTree = "<group>";
@@ -365,9 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C730221CFA3ABB001E409C /* HomeViewController.swift in Sources */,
 				69D0A7741CEE639D004FB9F1 /* ForgotPasswordViewController.swift in Sources */,
 				E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */,
+				69C730241CFA3B0C001E409C /* HeaderInfoView.swift in Sources */,
 				69D0A7601CE56201004FB9F1 /* SearchProfileChatTableViewController.swift in Sources */,
+				69C730261CFA3EF4001E409C /* PostedPics.swift in Sources */,
 				E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
