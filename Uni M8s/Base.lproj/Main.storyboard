@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -276,7 +276,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Pic Cell" reuseIdentifier="PicCell" id="XBO-1D-HIe" customClass="PostedPics" customModule="Uni_M8s" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="332" width="106" height="106"/>
+                                <rect key="frame" x="0.0" y="268" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
@@ -294,7 +294,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderInfo" id="L3f-dH-eib" customClass="HeaderInfoView" customModule="Uni_M8s" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="64" width="375" height="268"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUN-BO-9wB">
@@ -585,8 +585,8 @@
         <image name="UniICON" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qx2-f7-aCC"/>
         <segue reference="g3Y-sA-xlu"/>
-        <segue reference="hzj-HU-xad"/>
+        <segue reference="Qx2-f7-aCC"/>
+        <segue reference="FaY-FF-Tgt"/>
     </inferredMetricsTieBreakers>
 </document>

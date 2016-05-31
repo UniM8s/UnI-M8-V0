@@ -59,6 +59,9 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
     
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
     
+    var PassConfirmYes = false
+    var PassConfirmNo = false
+    
     func displayAlert(title: String, message: String) {
     
         if UniversityEmail.text == "" || Password.text == "" || Name.text == "" {
@@ -74,22 +77,24 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
   
         
     }
+        
+
+  
+        
     }
-    
     
         @IBAction func Signup(sender: AnyObject) {
             
             
-            if  UniversityEmail.text == "" || Password.text == ""  {
-                
+            if  UniversityEmail.text == "" || Password.text == "" || ConfirmPassword.text == ""  {
                 
             
             displayAlert("Error In Form", message: "oops! Please enter a valid university email, and password")
             
             
             
+            
             } else {
-                
                 
         
             activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
@@ -103,9 +108,10 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
             var errorMessage = "oops please try again"
                 
-  
                 
-                if ActiveSignUp == true {
+              if ActiveSignUp == true {
+            
+            
                     
                     let alertController = UIAlertController(title: "Agree To Terms & Condition to continue", message: "You will not be able to sign up to UNIM8's unless T&C's accepted. Please ensure you read the terms and conditions", preferredStyle: .Alert)
                     
@@ -139,17 +145,16 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                    // Present the controller
                      self.presentViewController(alertController, animated: true, completion: nil)
                     
-                
-                    
-                    
                     
             let user = PFUser()
                
-            user["names"] = Name.text
-                        
+            user["names"] = Name.text    
             user.username = UniversityEmail.text // UNI_EMAIL
             user.password = Password.text
             user.email = UniversityEmail.text // NAME
+            user["Gender"] = Gender.text
+            user["uniName"] = UniName.text
+                    
                     
             
             user.signUpInBackgroundWithBlock({ (success, error) in
@@ -189,8 +194,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
                 })
                     
-                
-                    
+            
+            
                 } else {
                     
                 
@@ -282,7 +287,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             
             
             
-                
+    
     
 
     
