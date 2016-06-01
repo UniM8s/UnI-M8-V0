@@ -98,11 +98,9 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             
             if validLogin {
                 
-               ActiveSignUp = true
                 print("User entered valid input")
             } else {
-                
-                
+             
                 
                 print("Invalid Email Adress Entered")
                 
@@ -142,9 +140,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             
                 
             var errorMessage = "oops please try again"
-                
-                
-              
+            
                 
               if ActiveSignUp == true {
             
@@ -266,10 +262,11 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                                     animated: true,
                                     completion: nil
                                 )
-                            }
                             
+                            }
                     self.activityIndicator.stopAnimating()
                     UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                            
                             
                             if user != nil {
                                 //logged in
