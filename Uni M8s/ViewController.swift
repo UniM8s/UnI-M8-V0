@@ -62,11 +62,13 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
     var PassConfirmYes = false
     var PassConfirmNo = false
     
-    func displayAlert(title: String, message: String) {
     
-        if UniversityEmail.text == "" || Password.text == "" || Name.text == "" {
+    
+    func displayAlert(title: String, message: String) {
+     
+        if UniversityEmail.text == "" || Password.text == "" || Name.text == ""  || ConfirmPassword.text == "" || Gender.text == "" || UniName.text == "" {
             
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Please Enter Fields Correctly", message: "Correctly Enter All fields to complete Login or Sign Up", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) in
                 
                 self.dismissViewControllerAnimated(true, completion: nil)
@@ -78,24 +80,57 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         
     }
         
+     
+        
 
   
         
     }
     
+    
+    
+
+    
         @IBAction func Signup(sender: AnyObject) {
+            //Email Text Field Constraints - University Email only - ., uni, student, uniname  + ac.uk, fr, edu.au, ....)
             
+            let validLogin = isValidEmail(UniversityEmail.text!)
             
-            if  UniversityEmail.text == "" || Password.text == "" || ConfirmPassword.text == ""  {
+            if validLogin {
                 
-            
-            displayAlert("Error In Form", message: "oops! Please enter a valid university email, and password")
-            
-            
-            
-            
+               ActiveSignUp = true
+                print("User entered valid input")
             } else {
                 
+                
+                
+                print("Invalid Email Adress Entered")
+                
+                
+                let WrongEmailAlert = UIAlertController(title: "Invalid Email Address", message: "you must use a valid university email address you wasteman!", preferredStyle: UIAlertControllerStyle.Alert)
+                WrongEmailAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) in
+                    
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                    
+                }))
+                
+                self.presentViewController(WrongEmailAlert, animated: true, completion: nil)
+                
+        
+                
+            }
+            ///edit section below for all fields!!!!!!!!!!
+            
+            if  UniversityEmail.text == "" || Password.text == "" || validLogin == false {
+                
+            
+            self.displayAlert("Error In Form", message: "oops! Please enter a valid university email, and password")
+                
+                
+                
+            
+            } else {
+  
         
             activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
             activityIndicator.center = self.view.center
@@ -109,43 +144,42 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             var errorMessage = "oops please try again"
                 
                 
+              
+                
               if ActiveSignUp == true {
             
-            
+                let alertController = UIAlertController(title: "Agree To Terms & Condition to continue", message: "You will not be able to sign up to UNIM8's unless T&C's accepted. Please ensure you read the terms and conditions", preferredStyle: .Alert)
+                
+                //Create the actions
+                let AgreeAction = UIAlertAction(title: "I AGREE", style: UIAlertActionStyle.Default) {
+                    UIAlertAction in
+                    NSLog("OK Pressed")
+                    self.performSegueWithIdentifier("Agreed2termsSegue", sender: self) //change to appropriate segue
                     
-                    let alertController = UIAlertController(title: "Agree To Terms & Condition to continue", message: "You will not be able to sign up to UNIM8's unless T&C's accepted. Please ensure you read the terms and conditions", preferredStyle: .Alert)
-                    
-                     //Create the actions
-                    let AgreeAction = UIAlertAction(title: "I AGREE", style: UIAlertActionStyle.Default) {
-                      UIAlertAction in
-                     NSLog("OK Pressed")
-                        self.performSegueWithIdentifier("Agreed2termsSegue", sender: self) //change to appropriate segue
-                        
-                    }
-                    let DisagreeAction = UIAlertAction(title: "I DO NOT AGREE", style: UIAlertActionStyle.Cancel) {
-                      UIAlertAction in
-                      NSLog("Cancel Pressed")
-                        
-                        
-                        self.performSegueWithIdentifier("DidNotAgreeTC", sender: self)
-               
-                        
-                            self.displayAlert("T&C", message: "You must agree to T&C before you can continue") //re-write sectionfor alert TC
-                        
-                        
-                        
-                    }
-                    
-                  //  Add the actions
-                    alertController.addAction(AgreeAction)
-                    alertController.addAction(DisagreeAction)
-
+                }
+                let DisagreeAction = UIAlertAction(title: "I DO NOT AGREE", style: UIAlertActionStyle.Cancel) {
+                    UIAlertAction in
+                    NSLog("Cancel Pressed")
                     
                     
-                   // Present the controller
-                     self.presentViewController(alertController, animated: true, completion: nil)
+                    self.performSegueWithIdentifier("DidNotAgreeTC", sender: self)
                     
                     
+                    self.displayAlert("T&C", message: "You must agree to T&C before you can continue") //re-write sectionfor alert TC
+                    
+                    
+                    
+                }
+                
+                //  Add the actions
+                alertController.addAction(AgreeAction)
+                alertController.addAction(DisagreeAction)
+                
+                
+                
+                // Present the controller
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
             let user = PFUser()
                
             user["names"] = Name.text    
@@ -191,6 +225,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                     
             
             }
+                
+                
                 
                 })
                     
@@ -263,30 +299,24 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         
                     
                     }}
-        
-            
     
-     //Email Text Field Constraints - University Email only - ., uni, student, uniname  + ac.uk, fr, edu.au, ....)
+    
             
-            let validLogin = isValidEmail(UniversityEmail.text!)
-            if validLogin {
-                print("User entered valid input")
-            } else {
-                print("Invalid email address")
-            }
+    }
+
+    
+            func isValidEmail(testStr:String) -> Bool {
+                let emailRegEx = "[A-Z0-9a-z._%+-]+@[ ., uni, student, coventry ]+\\.[ ac.uk, fr, edu.au, edu, ca ]{2,64}"
+                
+                
+                let range = testStr.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
+                let result = range != nil ? true : false
+                return result
+       
     }
     
-    func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[ ., uni, student,coventry,  ]+\\.[ ac.uk, fr, edu.au, edu, ca, shit shit shit fuck piss ]{2,64}"
-        
-        
-        let range = testStr.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
-        let result = range != nil ? true : false
-        return result
-    }
             
-            
-            
+       
     
     
 
@@ -509,7 +539,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         
     func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
         print("Failed to sign up......")
-}
+        
+    }
     
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
         print("Canceled")
