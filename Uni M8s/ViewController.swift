@@ -184,7 +184,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             user.email = UniversityEmail.text // NAME
             user["Gender"] = Gender.text
             user["uniName"] = UniName.text
-                    
+            user["interestOnWomen"] = InterestSwitch.on
                     
             
             user.signUpInBackgroundWithBlock({ (success, error) in
