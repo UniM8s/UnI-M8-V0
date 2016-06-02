@@ -58,13 +58,9 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
     
     
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
-    
-    var PassConfirmYes = false
-    var PassConfirmNo = false
-    
-    
-    
+   
     func displayAlert(title: String, message: String) {
+       
      
         if UniversityEmail.text == "" || Password.text == "" || Name.text == ""  || ConfirmPassword.text == "" || Gender.text == "" || UniName.text == "" {
             
@@ -76,29 +72,23 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             }))
             
             self.presentViewController(alert, animated: true, completion: nil)
-  
-        
-    }
-        
-     
-        
-
-  
-        
+       
     }
     
-    
-    
+        }
 
-    
         @IBAction func Signup(sender: AnyObject) {
-            //Email Text Field Constraints - University Email only - ., uni, student, uniname  + ac.uk, fr, edu.au, ....)
             
+            
+          
             let validLogin = isValidEmail(UniversityEmail.text!)
             
             if validLogin {
                 
                 print("User entered valid input")
+                
+                
+                
             } else {
              
                 
@@ -116,7 +106,12 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
         
                 
-            }
+                }
+            
+            
+          
+            
+            
             ///edit section below for all fields!!!!!!!!!!
             
             if  UniversityEmail.text == "" || Password.text == "" || validLogin == false {
@@ -124,12 +119,11 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             
             self.displayAlert("Error In Form", message: "oops! Please enter a valid university email, and password")
                 
-                
-                
+                       
             
             } else {
   
-        
+                        
             activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
             activityIndicator.center = self.view.center
             activityIndicator.hidesWhenStopped = true
@@ -143,7 +137,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             
                 
               if ActiveSignUp == true {
-            
+           
+              
                 let alertController = UIAlertController(title: "Agree To Terms & Condition to continue", message: "You will not be able to sign up to UNIM8's unless T&C's accepted. Please ensure you read the terms and conditions", preferredStyle: .Alert)
                 
                 //Create the actions
@@ -175,6 +170,11 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
                 // Present the controller
                 self.presentViewController(alertController, animated: true, completion: nil)
+           
+                
+                    
+  
+                
                 
             let user = PFUser()
                
@@ -204,6 +204,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                     
                 } else {
                     
+
+                    
                     if let errorString = error!.userInfo["error"] as? String {
                         
                         errorMessage = errorString
@@ -226,10 +228,11 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
                 
                 })
                     
-            
+                
             
                 } else {
-                    
+                
+                   
                 
                 PFUser.logInWithUsernameInBackground(UniversityEmail.text!, password: Password.text!, block:
                         { (user,error) -> Void in
@@ -299,8 +302,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
     
     
             
-    }
-
+            }
+ //Email Text Field Constraints - University Email only - ., uni, student, uniname  + ac.uk, fr, edu.au, ....)
     
             func isValidEmail(testStr:String) -> Bool {
                 let emailRegEx = "[A-Z0-9a-z._%+-]+@[ ., uni, student, coventry ]+\\.[ ac.uk, fr, edu.au, edu, ca ]{2,64}"
