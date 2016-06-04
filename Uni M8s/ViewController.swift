@@ -10,14 +10,20 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControllerDelegate,PFSignUpViewControllerDelegate
-{
-    var ActiveSignUp = true
+class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControllerDelegate,PFSignUpViewControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    
+    
+var ActiveSignUp = true
     
      var LogInController = PFLogInViewController.self()
      var SignUpController = PFSignUpViewController.self()
     
+    
+    @IBOutlet weak var UploadProfilePic: UIImageView!
+    @IBOutlet weak var UploadImageButton: UIButton!
 
+    
+    
     @IBOutlet var Name: UITextField! //IMPORTANT NOTES ======> Rename UNI-EMAIL - Restoration ID
     
     @IBOutlet var UniversityEmail: UITextField!   //IMPORTANT NOTES ======> Rename as NAME - Restoration ID
@@ -185,7 +191,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
             user["Gender"] = Gender.text
             user["uniName"] = UniName.text
             user["interestOnWomen"] = InterestSwitch.on
-                    
+            user["UserPicIMG"] = UploadProfilePic.image
             
             user.signUpInBackgroundWithBlock({ (success, error) in
                 
@@ -442,13 +448,11 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         
         
         super.viewDidAppear(animated)
-
         
-       if PFUser.currentUser() != nil {
-      
+        if PFUser.currentUser() != nil {
         //Nothing Happens
         
-        } else {
+        }else{
             
         
         PFUser.currentUser()?.fetchInBackgroundWithBlock({ (object, error) in
@@ -478,13 +482,41 @@ class ViewController: UIViewController, UITextFieldDelegate, PFLogInViewControll
         
         
     }
-}
-    
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-                    }
+        
+        
+        
+    }
 
+    @IBAction func AddImageButtonClicked(sender: AnyObject) {
+        
+        
+        let ProfileImage = UIImagePickerController()
+        ProfileImage.delegate = self
+        ProfileImage.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        ProfileImage.allowsEditing = true
+        self.presentViewController(ProfileImage, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        UploadProfilePic.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    
+        
+        
+        
+        
+        
+        
+    
 
     //Hide Keyboard Code
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
