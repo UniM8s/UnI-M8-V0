@@ -11,20 +11,15 @@ import Parse
 
 class swippingUserViewController: UIViewController {
     
-    
-
-    @IBOutlet weak var userImage1: UIImageView!
-    @IBOutlet weak var acceptOrRejectUserLabel: UILabel!
-    
     func wasDragged(likeDislikeUserGesture: UIPanGestureRecognizer) {
         
         let translation = likeDislikeUserGesture.translationInView(self.view)
-        let userImage = likeDislikeUserGesture.view!
-
+        let UserImage1 = likeDislikeUserGesture.view!
         
-        userImage.center = CGPoint(x: self.view.bounds.width / 2 + translation.x, y: self.view.bounds.height / 2 + translation.y)
         
-        let xFromCenter = userImage.center.x - self.view.bounds.width / 2
+        UserImage1.center = CGPoint(x: self.view.bounds.width / 2 + translation.x, y: self.view.bounds.height / 2 + translation.y)
+        
+        let xFromCenter = UserImage1.center.x - self.view.bounds.width / 2
         
         let scale = min(100 / abs(xFromCenter), 1)
         
@@ -33,16 +28,16 @@ class swippingUserViewController: UIViewController {
         
         var stretch = CGAffineTransformScale(rotation, scale, scale)
         
-        userImage.transform = stretch
+        UserImage1.transform = stretch
         
         
         if likeDislikeUserGesture.state == UIGestureRecognizerState.Ended {
             
-            if userImage.center.x < 100 {
+            if UserImage1.center.x < 100 {
                 
                 print("Not chosen")
                 
-            } else if userImage.center.x > self.view.bounds.width - 100 {
+            } else if UserImage1.center.x > self.view.bounds.width - 100 {
                 
                 print("Chosen")
                 
@@ -52,9 +47,9 @@ class swippingUserViewController: UIViewController {
             
             stretch = CGAffineTransformScale(rotation, 1, 1)
             
-            userImage.transform = stretch
+            UserImage1.transform = stretch
             
-            userImage.center = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)
+            UserImage1.center = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)
             
         }
         
@@ -62,11 +57,20 @@ class swippingUserViewController: UIViewController {
         
     }
 
+
+    @IBOutlet weak var userImage1: UIImageView!
+    @IBOutlet weak var acceptOrRejectUserLabel: UILabel!
+    
+    
+    
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         let likeDislikeUserGesture = UIPanGestureRecognizer(target: self, action: Selector("userImage1"))
         userImage1.addGestureRecognizer(likeDislikeUserGesture)
@@ -130,11 +134,11 @@ class swippingUserViewController: UIViewController {
     
                
 
-               }
-            }
-         }
+                   }
+              }
+           }
 
-      }
+         }
             
        }
  

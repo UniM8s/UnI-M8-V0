@@ -11,7 +11,8 @@
 		69C730241CFA3B0C001E409C /* HeaderInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C730231CFA3B0C001E409C /* HeaderInfoView.swift */; };
 		69C730261CFA3EF4001E409C /* PostedPics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C730251CFA3EF4001E409C /* PostedPics.swift */; };
 		69C7302A1D0101C9001E409C /* swippingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C730291D0101C9001E409C /* swippingUserViewController.swift */; };
-		69D0A7601CE56201004FB9F1 /* SearchProfileChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */; };
+		69C730331D077AD5001E409C /* UniSearchUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C730321D077AD5001E409C /* UniSearchUserVC.swift */; };
+		69C730351D0784F4001E409C /* SearchedUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C730341D0784F4001E409C /* SearchedUsers.swift */; };
 		69D0A7621CEA8945004FB9F1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7611CEA8945004FB9F1 /* Social.framework */; };
 		69D0A7641CEA897D004FB9F1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7631CEA897D004FB9F1 /* Accounts.framework */; };
 		69D0A7661CEA89B1004FB9F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7651CEA89B1004FB9F1 /* UIKit.framework */; };
@@ -65,7 +66,8 @@
 		69C730231CFA3B0C001E409C /* HeaderInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderInfoView.swift; sourceTree = "<group>"; };
 		69C730251CFA3EF4001E409C /* PostedPics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostedPics.swift; sourceTree = "<group>"; };
 		69C730291D0101C9001E409C /* swippingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swippingUserViewController.swift; sourceTree = "<group>"; };
-		69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProfileChatTableViewController.swift; sourceTree = "<group>"; };
+		69C730321D077AD5001E409C /* UniSearchUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniSearchUserVC.swift; sourceTree = "<group>"; };
+		69C730341D0784F4001E409C /* SearchedUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedUsers.swift; sourceTree = "<group>"; };
 		69D0A7611CEA8945004FB9F1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		69D0A7631CEA897D004FB9F1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		69D0A7651CEA89B1004FB9F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -149,6 +151,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69C7302F1D0779A2001E409C /* Profile Home */ = {
+			isa = PBXGroup;
+			children = (
+				69C730211CFA3ABB001E409C /* HomeViewController.swift */,
+				69C730231CFA3B0C001E409C /* HeaderInfoView.swift */,
+				69C730251CFA3EF4001E409C /* PostedPics.swift */,
+			);
+			name = "Profile Home";
+			sourceTree = "<group>";
+		};
+		69C730301D0779CE001E409C /* Student Matching */ = {
+			isa = PBXGroup;
+			children = (
+				69C730291D0101C9001E409C /* swippingUserViewController.swift */,
+			);
+			name = "Student Matching";
+			sourceTree = "<group>";
+		};
+		69C730311D0779FB001E409C /* Uni Search Users */ = {
+			isa = PBXGroup;
+			children = (
+				69C730321D077AD5001E409C /* UniSearchUserVC.swift */,
+				69C730341D0784F4001E409C /* SearchedUsers.swift */,
+			);
+			name = "Uni Search Users";
+			sourceTree = "<group>";
+		};
 		E00E3B911CD9533600EBAECB = {
 			isa = PBXGroup;
 			children = (
@@ -173,18 +202,16 @@
 		E00E3B9C1CD9533600EBAECB /* Uni M8s */ = {
 			isa = PBXGroup;
 			children = (
+				E00E3BA41CD9533600EBAECB /* Assets.xcassets */,
 				E00E3C011CD9666100EBAECB /* Uni M8s-Bridging-Header.h */,
 				E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */,
-				E098DD291CF095C900AC5421 /* LogIn & SignUp */,
 				E00E3BA11CD9533600EBAECB /* Main.storyboard */,
-				E00E3BA41CD9533600EBAECB /* Assets.xcassets */,
 				E00E3BA61CD9533600EBAECB /* LaunchScreen.storyboard */,
 				E00E3BA91CD9533600EBAECB /* Info.plist */,
-				69D0A75F1CE56201004FB9F1 /* SearchProfileChatTableViewController.swift */,
-				69C730211CFA3ABB001E409C /* HomeViewController.swift */,
-				69C730231CFA3B0C001E409C /* HeaderInfoView.swift */,
-				69C730251CFA3EF4001E409C /* PostedPics.swift */,
-				69C730291D0101C9001E409C /* swippingUserViewController.swift */,
+				E098DD291CF095C900AC5421 /* LogIn & SignUp */,
+				69C7302F1D0779A2001E409C /* Profile Home */,
+				69C730301D0779CE001E409C /* Student Matching */,
+				69C730311D0779FB001E409C /* Uni Search Users */,
 			);
 			path = "Uni M8s";
 			sourceTree = "<group>";
@@ -379,10 +406,11 @@
 			files = (
 				69C730221CFA3ABB001E409C /* HomeViewController.swift in Sources */,
 				69D0A7741CEE639D004FB9F1 /* ForgotPasswordViewController.swift in Sources */,
+				69C730351D0784F4001E409C /* SearchedUsers.swift in Sources */,
+				69C730331D077AD5001E409C /* UniSearchUserVC.swift in Sources */,
 				E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */,
 				69C730241CFA3B0C001E409C /* HeaderInfoView.swift in Sources */,
 				69C7302A1D0101C9001E409C /* swippingUserViewController.swift in Sources */,
-				69D0A7601CE56201004FB9F1 /* SearchProfileChatTableViewController.swift in Sources */,
 				69C730261CFA3EF4001E409C /* PostedPics.swift in Sources */,
 				E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */,
 			);
