@@ -340,8 +340,7 @@ var ActiveSignUp = true
             Women.hidden = !Women.hidden;
             InterestSwitch.hidden = !InterestSwitch.hidden;
             ConfirmPassword.hidden = !ConfirmPassword.hidden;
-            
-            
+                       
             
          SignUpLogin.setTitle("Log In", forState: UIControlState.Normal)
             
@@ -404,7 +403,7 @@ var ActiveSignUp = true
             Women.hidden = !Women.hidden;
             InterestSwitch.hidden = !InterestSwitch.hidden;
             ConfirmPassword.hidden = !ConfirmPassword.hidden;
-            
+       
             
             SignUpLogin.setTitle("Log In", forState: UIControlState.Normal)
             

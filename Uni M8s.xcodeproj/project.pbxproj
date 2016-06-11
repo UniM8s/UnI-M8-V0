@@ -42,6 +42,7 @@
 		E04F61BD1CE39A780029160C /* Parse.FrameworkSDK in Resources */ = {isa = PBXBuildFile; fileRef = E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */; };
 		E04F61C01CE7DADC0029160C /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */; };
 		E04F61C11CE7DADC0029160C /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */; };
+		E06BDF4B1D0B50090036063E /* WriteUniPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06BDF4A1D0B50090036063E /* WriteUniPostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Parse.FrameworkSDK; sourceTree = "<group>"; };
 		E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		E06BDF4A1D0B50090036063E /* WriteUniPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteUniPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				69C7302F1D0779A2001E409C /* Profile Home */,
 				69C730301D0779CE001E409C /* Student Matching */,
 				69C730311D0779FB001E409C /* Uni Search Users */,
+				E06BDF491D0B4FA60036063E /* Uni News Feed */,
 			);
 			path = "Uni M8s";
 			sourceTree = "<group>";
@@ -260,6 +263,14 @@
 				E00E3BCE1CD95F0900EBAECB /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E06BDF491D0B4FA60036063E /* Uni News Feed */ = {
+			isa = PBXGroup;
+			children = (
+				E06BDF4A1D0B50090036063E /* WriteUniPostVC.swift */,
+			);
+			name = "Uni News Feed";
 			sourceTree = "<group>";
 		};
 		E098DD291CF095C900AC5421 /* LogIn & SignUp */ = {
@@ -407,6 +418,7 @@
 				69C730221CFA3ABB001E409C /* HomeViewController.swift in Sources */,
 				69D0A7741CEE639D004FB9F1 /* ForgotPasswordViewController.swift in Sources */,
 				69C730351D0784F4001E409C /* SearchedUsers.swift in Sources */,
+				E06BDF4B1D0B50090036063E /* WriteUniPostVC.swift in Sources */,
 				69C730331D077AD5001E409C /* UniSearchUserVC.swift in Sources */,
 				E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */,
 				69C730241CFA3B0C001E409C /* HeaderInfoView.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,13 +20,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13J-O4-ldF">
                                 <rect key="frame" x="0.0" y="337" width="375" height="67"/>
-                                <color key="backgroundColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <color key="tintColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="1" height="2.2250738585072014e-308"/>
                                 <state key="normal" title="Agree To Terms &amp; Conditions to Log In">
-                                    <color key="titleColor" red="0.90062735510488412" green="0.80061295610319905" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.86138391780000001" green="0.82597611100000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="Agree2TermsSegue" id="Qx2-f7-aCC"/>
@@ -47,7 +46,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.86138391779988321" green="0.82597611097282853" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.36933529170000001" green="0.97619437170000001" blue="0.92978552449999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -58,7 +57,7 @@
         <!--login/SignUpVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="login/SignUpVC" modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="login/SignUpVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="currentContext" id="BYZ-38-t0r" customClass="ViewController" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,58 +71,55 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fade Filter - blue" translatesAutoresizingMaskIntoConstraints="NO" id="0zi-d0-tZD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-WD-AUv">
-                                <rect key="frame" x="21" y="421" width="335" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="louis" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-WD-AUv">
+                                <rect key="frame" x="21" y="307" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to UniM8s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-Ee-0Zg">
-                                <rect key="frame" x="78" y="13" width="220" height="34"/>
+                                <rect key="frame" x="77" y="11" width="220" height="25"/>
                                 <color key="tintColor" red="0.56554526090000001" green="0.1860924363" blue="0.7254902124" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.56554526090000001" green="0.1860924363" blue="0.7254902124" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.56554526090000001" green="0.1860924363" blue="0.7254902124" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-Gr-14c">
-                                <rect key="frame" x="20" y="541" width="201" height="29.5"/>
+                                <rect key="frame" x="9" y="456" width="201" height="29.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-1" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8o-9Y-eRm">
-                                <rect key="frame" x="-1" y="497" width="375" height="39"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="405" width="375" height="39"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="1" height="2.2250738585072014e-308"/>
                                 <state key="normal" title="Sign up">
-                                    <color key="titleColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="Signup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nyt-CH-xos"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NAME" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="University Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ed5-WW-WIw">
-                                <rect key="frame" x="20" y="383" width="335" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NAME" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="christ31@uni.coventry.ac.uk" borderStyle="roundedRect" placeholder="University Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ed5-WW-WIw">
+                                <rect key="frame" x="21" y="261" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="UniName" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="University Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wPO-Hg-r3h">
-                                <rect key="frame" x="20" y="222" width="334" height="30"/>
+                                <rect key="frame" x="162" y="93" width="205" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender " textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OcD-ov-8og">
-                                <rect key="frame" x="20" y="260" width="334" height="30"/>
+                                <rect key="frame" x="162" y="141" width="205" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="PURPLE" offImage="PURPLE" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-FQ-oYS">
-                                <rect key="frame" x="162" y="333" width="51" height="31"/>
+                                <rect key="frame" x="150" y="215" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
                                 </accessibility>
@@ -131,99 +127,96 @@
                                 <color key="thumbTintColor" red="0.0" green="0.98267751960000005" blue="0.86226055440000005" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Women" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGm-It-51p">
-                                <rect key="frame" x="226" y="333" width="64" height="31"/>
+                                <rect key="frame" x="214" y="215" width="64" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Men" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytm-Si-5bJ">
-                                <rect key="frame" x="111" y="333" width="37" height="31"/>
+                                <rect key="frame" x="99" y="215" width="37" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.30592231411349119" green="0.29503037066390986" blue="0.39111583769633507" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-1" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who Are You Interested In?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vH-Oo-J2t">
-                                <rect key="frame" x="24" y="298" width="208" height="21"/>
+                                <rect key="frame" x="5" y="186" width="208" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nwl-g5-034">
-                                <rect key="frame" x="21" y="459" width="333" height="30"/>
+                                <rect key="frame" x="23" y="353" width="333" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v09-hD-fwv">
+                                <rect key="frame" x="5" y="44" width="143" height="134"/>
+                                <state key="normal" title="Add a photo">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddImageButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eia-7U-3tY"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="PFImageView" translatesAutoresizingMaskIntoConstraints="NO" id="s0b-EN-7Xa">
-                                <rect key="frame" x="73" y="42" width="143" height="134"/>
+                                <rect key="frame" x="5" y="44" width="143" height="134"/>
                                 <color key="backgroundColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="UNIEmail" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hf9-1r-mcU">
-                                <rect key="frame" x="20" y="184" width="335" height="30"/>
+                                <rect key="frame" x="162" y="44" width="205" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrH-b4-v40">
-                                <rect key="frame" x="-1" y="579" width="376" height="30"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="1" height="0.0"/>
-                                <state key="normal" title="Forgot Password?">
-                                    <color key="titleColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="B6D-sa-P7Y" kind="show" id="uLz-aW-Qtb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3I-Sp-dhl">
                                 <rect key="frame" x="-1" y="637" width="375" height="30"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="Terms &amp; Conditions">
-                                    <color key="titleColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="rv5-Gl-S4F" kind="show" identifier="toTCSegue" id="g3Y-sA-xlu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ou-qW-3mO">
-                                <rect key="frame" x="-1" y="609" width="375" height="30"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="-1" y="599" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="Privacy Policy">
-                                    <color key="titleColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="T3o-E2-8vr" kind="show" id="GZa-x5-l2u"/>
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VR-na-jrV">
-                                <rect key="frame" x="225" y="537" width="149" height="33.5"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="214" y="453" width="149" height="33.5"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="Log in ">
-                                    <color key="titleColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OK1-9x-dqV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v09-hD-fwv">
-                                <rect key="frame" x="224" y="77" width="139" height="30"/>
-                                <state key="normal" title="Add a fucking photo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrH-b4-v40">
+                                <rect key="frame" x="-1" y="561" width="376" height="30"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
+                                <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="AddImageButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eia-7U-3tY"/>
+                                    <segue destination="B6D-sa-P7Y" kind="show" id="uLz-aW-Qtb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -275,7 +268,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZZ-oa-E6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73.5" y="-906.5"/>
+            <point key="canvasLocation" x="129.5" y="-898.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Rjb-ZO-pGG">
@@ -389,9 +382,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqr-1e-175">
+                                <rect key="frame" x="13" y="28" width="350" height="283"/>
+                                <string key="text">Congratulations!!! You have succefully sign up to UniM8's, have fun here are some rules to follow below, We have sent you an email so that you can verify your account</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.79338801650000002" green="0.3978939923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfa-oF-WQX">
                                 <rect key="frame" x="0.0" y="311" width="375" height="46"/>
-                                <color key="backgroundColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.79338801650000002" green="0.3978939923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="1" height="2.2250738585072014e-308"/>
                                 <state key="normal" title="LOG IN!!">
@@ -402,13 +402,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="AgreedLogInButtonSegue" id="1lp-Yh-XPC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqr-1e-175">
-                                <rect key="frame" x="13" y="28" width="350" height="283"/>
-                                <string key="text">Congratulations!!! You have succefully sign up to UniM8's, have fun here are some rules to follow below, We have sent you an email so that you can verify your account</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.79338801650000002" green="0.3978939923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.8418836489" green="0.97956196159999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -432,10 +425,10 @@
                         <subviews>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ass-Dp-pMr">
                                 <rect key="frame" x="115" y="139" width="144" height="42"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="Recover Password">
-                                    <color key="titleColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="RecoverPassButton:" destination="B6D-sa-P7Y" eventType="touchUpInside" id="ivW-2u-F5Q"/>
@@ -443,12 +436,12 @@
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6s-Co-5YR">
                                 <rect key="frame" x="0.0" y="594" width="375" height="73"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="BACK TO LOGIN">
-                                    <color key="titleColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="backToLoginButtonTapped:" destination="B6D-sa-P7Y" eventType="touchUpInside" id="7NR-KF-Xpl"/>
@@ -492,12 +485,12 @@
                             </textView>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7c-Eb-ThT">
                                 <rect key="frame" x="0.0" y="594" width="375" height="73"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="BACK TO LOGIN">
-                                    <color key="titleColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="BacktoLoginPP" id="DoQ-uC-CF9"/>
@@ -512,10 +505,10 @@
             </objects>
             <point key="canvasLocation" x="-1946.5" y="-922.5"/>
         </scene>
-        <!--View Controller-->
+        <!--T&C VC-->
         <scene sceneID="Fnm-00-zum">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="rv5-Gl-S4F" sceneMemberID="viewController">
+                <viewController title="T&amp;C VC" modalTransitionStyle="crossDissolve" id="rv5-Gl-S4F" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TPK-vi-yia"/>
                         <viewControllerLayoutGuide type="bottom" id="7os-iE-Eaz"/>
@@ -539,18 +532,18 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="TERMS &amp; CONDITIONS:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C2r-7R-Agt">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" red="0.70980392160000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.26908010599999999" green="0.99975275990000001" blue="0.8764853131" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prw-kQ-kOp">
                                 <rect key="frame" x="0.0" y="594" width="375" height="73"/>
-                                <color key="backgroundColor" red="0.77999772950000001" green="0.75232200390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19614252831234336" green="0.78435310112784828" blue="1" alpha="0.45154587765957449" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="BACK TO LOGIN">
-                                    <color key="titleColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.60278030930000004" green="0.91329193850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="backToLoginButtonTapped:" destination="B6D-sa-P7Y" eventType="touchUpInside" id="L7I-ea-noc"/>
@@ -606,7 +599,7 @@
                                     <constraint firstAttribute="height" constant="44" id="WNe-re-x96"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Match with a student cuntface " id="72x-NX-fog"/>
+                                    <navigationItem title="UniLinked" id="72x-NX-fog"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -629,11 +622,13 @@
             </objects>
             <point key="canvasLocation" x="596.5" y="-1738.5"/>
         </scene>
-        <!--UniM8tch-->
+        <!--Profile-->
         <scene sceneID="wBY-WE-M8a">
             <objects>
-                <navigationController title="UniM8tch" automaticallyAdjustsScrollViewInsets="NO" id="Oyu-pn-V7g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="UniM8tch" id="LFh-CG-PNP"/>
+                <navigationController title="Profile" automaticallyAdjustsScrollViewInsets="NO" id="Oyu-pn-V7g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile Button" id="LFh-CG-PNP">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" verticalHuggingPriority="220" verticalCompressionResistancePriority="250" id="rat-Wv-Jep">
@@ -656,11 +651,13 @@
             </objects>
             <point key="canvasLocation" x="596.5" y="-906.5"/>
         </scene>
-        <!--Uni Search-->
+        <!--UniM8tch-->
         <scene sceneID="3BY-R8-JGg">
             <objects>
-                <navigationController title="Uni Search" automaticallyAdjustsScrollViewInsets="NO" id="4zr-A8-cqo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="UniSearch" id="zLX-gj-pui"/>
+                <navigationController title="UniM8tch" automaticallyAdjustsScrollViewInsets="NO" id="4zr-A8-cqo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="UniLink" image="UniMatch" id="zLX-gj-pui" userLabel="UniM8tch">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRD-zU-6kv">
@@ -676,10 +673,10 @@
             </objects>
             <point key="canvasLocation" x="1140" y="-906"/>
         </scene>
-        <!--Uni Search-->
+        <!--UniFind-->
         <scene sceneID="lrs-l1-NqS">
             <objects>
-                <viewController storyboardIdentifier="Uni Search" title="Uni Search" id="CCi-nu-jeZ" customClass="UniSearchUserVC" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UniFind" title="UniFind" id="CCi-nu-jeZ" customClass="UniSearchUserVC" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k3X-Ks-kCv"/>
                         <viewControllerLayoutGuide type="bottom" id="Hn8-pn-lqc"/>
@@ -688,7 +685,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-co-G6C">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="User Cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-co-G6C">
                                 <rect key="frame" x="0.0" y="84" width="375" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -699,7 +696,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-lP-Hm3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="UserIMG" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-lP-Hm3">
                                                     <rect key="frame" x="5" y="5" width="110" height="110"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOB-wC-LTn">
@@ -730,17 +727,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Uni Search" id="dE3-a3-GXh"/>
+                    <navigationItem key="navigationItem" title="UniFind" id="dE3-a3-GXh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="UserCell" destination="Zm9-co-G6C" id="f95-RL-fcO"/>
+                        <outlet property="searchDisplayController" destination="R84-4v-snk" id="uUW-xV-2k8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lE5-eq-ULK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="R84-4v-snk">
+                    <connections>
+                        <outlet property="delegate" destination="CCi-nu-jeZ" id="hgk-uK-evM"/>
+                        <outlet property="searchContentsController" destination="CCi-nu-jeZ" id="m21-cE-LqO"/>
+                        <outlet property="searchResultsDataSource" destination="CCi-nu-jeZ" id="LQs-Hh-10g"/>
+                        <outlet property="searchResultsDelegate" destination="CCi-nu-jeZ" id="gyT-5E-R7D"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1020.5" y="-1775.5"/>
+            <point key="canvasLocation" x="1096.5" y="-1738.5"/>
         </scene>
-        <!--UniChat-->
+        <!--Unions-->
         <scene sceneID="mmV-Gp-Yyq">
             <objects>
                 <viewController id="U8a-Df-0Ki" sceneMemberID="viewController">
@@ -753,7 +759,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="UniChat" id="ZPf-zg-MRg"/>
+                    <navigationItem key="navigationItem" title="Unions" id="ZPf-zg-MRg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2J-wr-ITQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -763,7 +769,7 @@
         <!--UniFeed-->
         <scene sceneID="Z4T-eX-dy7">
             <objects>
-                <viewController id="2YM-4s-0WH" sceneMemberID="viewController">
+                <viewController title="UniFeed" id="2YM-4s-0WH" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Q0-p4-i6r"/>
                         <viewControllerLayoutGuide type="bottom" id="XS0-Fe-Y0W"/>
@@ -771,7 +777,16 @@
                     <view key="view" contentMode="scaleToFill" id="8JJ-Pv-vxT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11i-HC-fKc">
+                                <rect key="frame" x="171" y="568" width="33" height="42"/>
+                                <state key="normal" title="Button" image="UniFeed"/>
+                                <connections>
+                                    <segue destination="XYr-vm-ccr" kind="show" identifier="WritePostSG" id="v1S-gN-pse"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36933529170768259" green="0.9761943717277487" blue="0.92978552449018215" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="UniFeed" id="nZ0-fs-4Hy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -780,11 +795,68 @@
             </objects>
             <point key="canvasLocation" x="2120.5" y="-1738.5"/>
         </scene>
-        <!--Item-->
+        <!--Make A Post-->
+        <scene sceneID="nCw-iS-XLj">
+            <objects>
+                <viewController storyboardIdentifier="WriteUniPost" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XYr-vm-ccr" customClass="WriteUniPostVC" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NFW-zm-45k"/>
+                        <viewControllerLayoutGuide type="bottom" id="iRU-Ya-Acf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zyv-Du-dEb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSE-5I-tLM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="246"/>
+                                <color key="backgroundColor" red="0.01556437179" green="0.78828534029999997" blue="0.68394698860000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Choose A Picture">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChooseIMG:" destination="XYr-vm-ccr" eventType="touchUpInside" id="8Hf-1h-Edo"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEe-op-gxi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="246"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="PostButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-FH-nug">
+                                <rect key="frame" x="170" y="425" width="34" height="48"/>
+                                <state key="normal" title="POST" image="UniFeed"/>
+                                <connections>
+                                    <action selector="PostButtonClicked:" destination="XYr-vm-ccr" eventType="touchUpInside" id="NdG-gl-TKV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-nr-kpc">
+                                <rect key="frame" x="0.0" y="311" width="375" height="106"/>
+                                <color key="backgroundColor" red="0.78108728800051586" green="0.98084090414686975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77818226439790572" green="0.77818226439790572" blue="0.77818226439790572" alpha="0.77371453900709219" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Make A Post" id="y3Z-aX-7jj"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="PicIMG" destination="SEe-op-gxi" id="IaJ-j6-rfH"/>
+                        <outlet property="PostButton" destination="Ne3-FH-nug" id="2xD-5o-5gf"/>
+                        <outlet property="WritePostTXT" destination="SNM-nr-kpc" id="KDf-PW-NZ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrL-2c-53t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2565.5" y="-1738.5"/>
+        </scene>
+        <!--UniFind-->
         <scene sceneID="A7J-8G-HoF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PYz-Xe-1ZR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HQS-L2-Ugc"/>
+                <navigationController title="UniFind" automaticallyAdjustsScrollViewInsets="NO" id="PYz-Xe-1ZR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="UniFind" image="UniFind" id="HQS-L2-Ugc">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ax-sH-ivl">
@@ -798,13 +870,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cn-h6-5Hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1624.5" y="-906.5"/>
+            <point key="canvasLocation" x="1612.5" y="-906.5"/>
         </scene>
-        <!--Item-->
+        <!--UniFeed-->
         <scene sceneID="IyI-QI-YFe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0id-S0-NF1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8k9-gX-E8v"/>
+                <navigationController title="UniFeed" automaticallyAdjustsScrollViewInsets="NO" id="0id-S0-NF1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="UniFeed" image="UniFeed" id="8k9-gX-E8v">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUW-mi-ZRG">
@@ -818,13 +892,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVz-mh-C8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2545.5" y="-901.5"/>
+            <point key="canvasLocation" x="2565.5" y="-906.5"/>
         </scene>
-        <!--Item-->
+        <!--Unions-->
         <scene sceneID="faC-8I-IEl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oZu-sp-TRx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3rr-9h-GzF"/>
+                <navigationController title="Unions" automaticallyAdjustsScrollViewInsets="NO" id="oZu-sp-TRx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Unions" image="UnionIMG" id="3rr-9h-GzF">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Pk-wo-m3F">
@@ -842,13 +918,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BAckground Image" width="464" height="1198"/>
+        <image name="BAckground Image" width="460" height="736"/>
         <image name="Fade Filter - blue" width="238" height="392"/>
         <image name="PURPLE" width="28" height="28"/>
+        <image name="Profile Button" width="32" height="32"/>
+        <image name="UniFeed" width="32" height="32"/>
+        <image name="UniFind" width="32" height="32"/>
+        <image name="UniMatch" width="32" height="32"/>
+        <image name="UnionIMG" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="g3Y-sA-xlu"/>
         <segue reference="DoQ-uC-CF9"/>
         <segue reference="FaY-FF-Tgt"/>
-        <segue reference="g3Y-sA-xlu"/>
     </inferredMetricsTieBreakers>
 </document>

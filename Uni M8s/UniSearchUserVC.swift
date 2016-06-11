@@ -49,11 +49,13 @@ class UniSearchUserVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         let Objects = try! UserInforQuery.findObjects()
         
         for Object in Objects {
-           //let us:PFUser = Objects as! PFUser
+           let us:PFUser = Object as! PFUser
             self.nameArray.append(Object["names"] as!String)
-           // self.userImageFileArray.append(Object["UserPicIMG"] as!PFFile)
+          // self.userImageFileArray.append(Object["UserPicIMG"] as!PFFile)
             
             self.UserCell.reloadData()
+            
+          us.revert()
             
         }
         

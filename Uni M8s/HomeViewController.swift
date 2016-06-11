@@ -26,12 +26,16 @@ class HomeViewController: UICollectionViewController {
         // always vertical scroll
         self.collectionView?.alwaysBounceVertical = true
 
-        collectionView?.backgroundColor = .lightGrayColor()
+        collectionView?.backgroundColor = .whiteColor()
         // set navigation bar title to current user
         self.navigationItem.title = "UNIM8"
+        
+      NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("refreshPage"), name: "refreshPage", object: nil)
+        
+      NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("Upload"), name: "Upload", object: nil)
      
         refreshPage = UIRefreshControl()
-        refreshPage.attributedTitle = NSAttributedString(string: "refreshPage")
+        refreshPage.attributedTitle = NSAttributedString(string: "refresh")
         refreshPage.addTarget(self, action: Selector("refreshPage"), forControlEvents: UIControlEvents.ValueChanged)
         self.collectionView?.addSubview(refreshPage)
         
@@ -43,6 +47,13 @@ class HomeViewController: UICollectionViewController {
          refreshPage.endRefreshing()
         
     }
+    
+    func Upload(notigications:NSNotification){
+        
+        loadPosts()
+    }
+    
+    
 
     func loadPosts() {
         
@@ -121,44 +132,5 @@ class HomeViewController: UICollectionViewController {
         
     }
     
-    
-    
-    //override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-      //  let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-    
-    
-      //  return cell
-   // }
-    
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-    
-    }
-    */
 
 }

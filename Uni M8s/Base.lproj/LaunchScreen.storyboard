@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,6 +19,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BAckground Image" translatesAutoresizingMaskIntoConstraints="NO" id="Ecw-Rc-61w">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.29028959424083767" green="0.29028959424083767" blue="0.29028959424083767" alpha="0.77371453900709219" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fade Filter - blue" translatesAutoresizingMaskIntoConstraints="NO" id="bHM-ek-hiA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -34,7 +35,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BAckground Image" width="464" height="1198"/>
+        <image name="BAckground Image" width="460" height="736"/>
         <image name="Fade Filter - blue" width="238" height="392"/>
     </resources>
 </document>
