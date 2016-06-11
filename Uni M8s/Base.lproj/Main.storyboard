@@ -567,7 +567,7 @@
                         <viewControllerLayoutGuide type="top" id="Uxa-65-3xa"/>
                         <viewControllerLayoutGuide type="bottom" id="K7q-AY-gF1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Klc-d6-xkn">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="UniM8tch" id="Klc-d6-xkn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

@@ -45,7 +45,8 @@ class WriteUniPostVC: UIViewController , UIImagePickerControllerDelegate, UINavi
         objects["username"] = PFUser.currentUser()!.username
         objects["UserPicIMG"] = PFUser.currentUser()!.valueForKey("UserPicIMG") as! PFFile
         objects["UUID"] = "\(PFUser.currentUser()!.username)\(NSUUID().UUIDString)"
-    
+        objects["names"] = PFUser.currentUser()!.valueForKey("names") as! String
+        
         
         
         if WritePostTXT.text.isEmpty{
@@ -60,8 +61,8 @@ class WriteUniPostVC: UIViewController , UIImagePickerControllerDelegate, UINavi
     
     //Send pic to server backend (parse)
         let PictureData = UIImageJPEGRepresentation(PicIMG.image!, 0.5)
-        let ImageFile = PFFile(name: "Pictures", data: PictureData!)
-        objects["PicIMG"] = ImageFile
+        let ImageFile = PFFile(name: "UploadedPic", data: PictureData!)
+        objects["Pictures"] = ImageFile
         
         
         objects.saveInBackgroundWithBlock { (success:Bool, error:NSError?) -> Void in
