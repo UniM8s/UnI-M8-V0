@@ -15,7 +15,7 @@ class HomeViewController: UICollectionViewController {
     var refreshPage : UIRefreshControl!
     
     // size of page 
-    var page : Int = 1
+    var page : Int = 3
     
     var UUIDArray = [String]()
     var PictureArray = [PFFile]()
