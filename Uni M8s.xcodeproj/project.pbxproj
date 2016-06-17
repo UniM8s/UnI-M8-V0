@@ -20,6 +20,10 @@
 		69D0A76A1CEA89E7004FB9F1 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A7691CEA89E7004FB9F1 /* ParseFacebookUtils.framework */; };
 		69D0A76C1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0A76B1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework */; };
 		69D0A7741CEE639D004FB9F1 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D0A7731CEE639D004FB9F1 /* ForgotPasswordViewController.swift */; };
+		69FAA6E71D10AC180038512D /* UniPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FAA6E61D10AC180038512D /* UniPostVC.swift */; };
+		69FAA6E91D10B1FA0038512D /* UniFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FAA6E81D10B1FA0038512D /* UniFeedViewController.swift */; };
+		69FAA6EB1D10B6D00038512D /* MainFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FAA6EA1D10B6D00038512D /* MainFeedCell.swift */; };
+		69FAA6ED1D10CBA90038512D /* Unim8sUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FAA6EC1D10CBA90038512D /* Unim8sUsersViewController.swift */; };
 		E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */; };
 		E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9F1CD9533600EBAECB /* ViewController.swift */; };
 		E00E3BA31CD9533600EBAECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00E3BA11CD9533600EBAECB /* Main.storyboard */; };
@@ -42,7 +46,6 @@
 		E04F61BD1CE39A780029160C /* Parse.FrameworkSDK in Resources */ = {isa = PBXBuildFile; fileRef = E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */; };
 		E04F61C01CE7DADC0029160C /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */; };
 		E04F61C11CE7DADC0029160C /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */; };
-		E06BDF4B1D0B50090036063E /* WriteUniPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06BDF4A1D0B50090036063E /* WriteUniPostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,10 @@
 		69D0A7691CEA89E7004FB9F1 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Parse.FrameworkSDK/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		69D0A76B1CEA89FD004FB9F1 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Parse.FrameworkSDK/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		69D0A7731CEE639D004FB9F1 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		69FAA6E61D10AC180038512D /* UniPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniPostVC.swift; sourceTree = "<group>"; };
+		69FAA6E81D10B1FA0038512D /* UniFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniFeedViewController.swift; sourceTree = "<group>"; };
+		69FAA6EA1D10B6D00038512D /* MainFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFeedCell.swift; sourceTree = "<group>"; };
+		69FAA6EC1D10CBA90038512D /* Unim8sUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unim8sUsersViewController.swift; sourceTree = "<group>"; };
 		E00E3B9A1CD9533600EBAECB /* Uni M8s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uni M8s.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E00E3B9F1CD9533600EBAECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +112,6 @@
 		E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Parse.FrameworkSDK; sourceTree = "<group>"; };
 		E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
-		E06BDF4A1D0B50090036063E /* WriteUniPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteUniPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,7 @@
 			children = (
 				69C730321D077AD5001E409C /* UniSearchUserVC.swift */,
 				69C730341D0784F4001E409C /* SearchedUsers.swift */,
+				69FAA6EC1D10CBA90038512D /* Unim8sUsersViewController.swift */,
 			);
 			name = "Uni Search Users";
 			sourceTree = "<group>";
@@ -268,7 +275,9 @@
 		E06BDF491D0B4FA60036063E /* Uni News Feed */ = {
 			isa = PBXGroup;
 			children = (
-				E06BDF4A1D0B50090036063E /* WriteUniPostVC.swift */,
+				69FAA6E61D10AC180038512D /* UniPostVC.swift */,
+				69FAA6E81D10B1FA0038512D /* UniFeedViewController.swift */,
+				69FAA6EA1D10B6D00038512D /* MainFeedCell.swift */,
 			);
 			name = "Uni News Feed";
 			sourceTree = "<group>";
@@ -417,14 +426,17 @@
 			files = (
 				69C730221CFA3ABB001E409C /* HomeViewController.swift in Sources */,
 				69D0A7741CEE639D004FB9F1 /* ForgotPasswordViewController.swift in Sources */,
+				69FAA6EB1D10B6D00038512D /* MainFeedCell.swift in Sources */,
 				69C730351D0784F4001E409C /* SearchedUsers.swift in Sources */,
-				E06BDF4B1D0B50090036063E /* WriteUniPostVC.swift in Sources */,
 				69C730331D077AD5001E409C /* UniSearchUserVC.swift in Sources */,
 				E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */,
 				69C730241CFA3B0C001E409C /* HeaderInfoView.swift in Sources */,
 				69C7302A1D0101C9001E409C /* swippingUserViewController.swift in Sources */,
+				69FAA6E71D10AC180038512D /* UniPostVC.swift in Sources */,
 				69C730261CFA3EF4001E409C /* PostedPics.swift in Sources */,
 				E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */,
+				69FAA6ED1D10CBA90038512D /* Unim8sUsersViewController.swift in Sources */,
+				69FAA6E91D10B1FA0038512D /* UniFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

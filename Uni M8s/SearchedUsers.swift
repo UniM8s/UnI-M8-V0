@@ -16,11 +16,6 @@ class SearchedUsers: UITableViewCell {
     @IBOutlet weak var UserName: UILabel!
     
     
-    
-    
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
