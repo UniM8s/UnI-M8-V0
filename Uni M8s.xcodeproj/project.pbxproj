@@ -46,6 +46,7 @@
 		E04F61BD1CE39A780029160C /* Parse.FrameworkSDK in Resources */ = {isa = PBXBuildFile; fileRef = E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */; };
 		E04F61C01CE7DADC0029160C /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */; };
 		E04F61C11CE7DADC0029160C /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */; };
+		E097A8F41D14AE4D0009782B /* UserFindTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097A8F31D14AE4D0009782B /* UserFindTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Parse.FrameworkSDK; sourceTree = "<group>"; };
 		E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		E097A8F31D14AE4D0009782B /* UserFindTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFindTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				69C730321D077AD5001E409C /* UniSearchUserVC.swift */,
 				69C730341D0784F4001E409C /* SearchedUsers.swift */,
 				69FAA6EC1D10CBA90038512D /* Unim8sUsersViewController.swift */,
+				E097A8F31D14AE4D0009782B /* UserFindTableViewCell.swift */,
 			);
 			name = "Uni Search Users";
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */,
 				69FAA6ED1D10CBA90038512D /* Unim8sUsersViewController.swift in Sources */,
 				69FAA6E91D10B1FA0038512D /* UniFeedViewController.swift in Sources */,
+				E097A8F41D14AE4D0009782B /* UserFindTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

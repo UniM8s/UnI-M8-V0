@@ -7,29 +7,85 @@
 //
 
 import UIKit
+import Parse
 
-class Unim8sUsersViewController: UIViewController {
 
+class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var UserResults: UITableView!
+    
+    var NameArray = [String]()
+    var UniNameArray = [String]()
+    var UserImageFile = [PFFile]()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        let Width = view.frame.size.width
+        let Height = view.frame.size.height
+        
+        UserResults.frame = CGRectMake(0, 0, Width, Height)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        NameArray.removeAll(keepCapacity: false)
+        UniNameArray.removeAll(keepCapacity: false)
+        UserImageFile.removeAll(keepCapacity: false)
+        
+        var query = PFUser.query()
+        query!.whereKey("username", notEqualTo: PFUser.currentUser()!.username!)
+        
+        query!.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error:NSError?)  -> Void in
+            
+            if error == nil{
+                
+                for object in objects{
+                    
+                    self.NameArray.append(object.objectForKey("names")as String)
+                    self.UniNameArray.append(object.objectForKey("UniName")as String)
+                     self.UserImageFile.append(object.objectForKey("UserPicIMG")as PFFile)
+                    
+                    
+                }
+            }
+            
+        
+        
+        }
+        
     }
-    */
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return NameArray.count
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return 65
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let Cell:UserFindTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UserFindTableViewCell
+        return Cell
+        
+    }
+    
 
 }
