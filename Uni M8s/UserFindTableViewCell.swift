@@ -42,5 +42,26 @@ class UserFindTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    // For when the button is clicked....
+    @IBAction func addAM8Button(sender: AnyObject) {
+        
+        let title = M8Button.titleForState(.Normal)
+        
+        if title == "m8s" {
+          
+            let m8sObj = PFObject(className: "m8s")
+            
+            m8sObj["UserfindVC"] = PFUser.currentUser()?.username
+            m8sObj["UserToFollow"] = M8Button
+            
+            
+          //  m8sObj.save()
+            
+            
+        }else {
+            
+        }
+        
+    }
 
 }

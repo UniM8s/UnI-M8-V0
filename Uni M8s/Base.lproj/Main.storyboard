@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -778,16 +778,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11i-HC-fKc">
-                                <rect key="frame" x="171" y="568" width="33" height="42"/>
-                                <state key="normal" title="Button" image="UniFeed"/>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t5F-31-IQV">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="0Js-Ub-tlb" customClass="MainFeedCell" customModule="Uni_M8s" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Js-Ub-tlb" id="sXh-aJ-xkw">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
@@ -805,7 +801,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-CJ-dmT">
                                                     <rect key="frame" x="85" y="8" width="204" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -818,19 +814,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11i-HC-fKc">
+                                <rect key="frame" x="171" y="568" width="33" height="42"/>
+                                <state key="normal" title="Button" image="UniFeed"/>
+                                <connections>
+                                    <segue destination="XYr-vm-ccr" kind="show" id="MjE-ir-J9z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.36933529170768259" green="0.9761943717277487" blue="0.92978552449018215" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="UniFeed" id="nZ0-fs-4Hy">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="gXr-jk-gTo">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YNk-Rs-le7">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="YNk-Rs-le7">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Users"/>
                                 <connections>
-                                    <segue destination="0Fs-PH-bKw" kind="show" identifier="ToUsers" id="7Vj-n0-tUc"/>
+                                    <segue destination="0Fs-PH-bKw" kind="show" id="BZC-Et-v56"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <segue destination="0Fs-PH-bKw" kind="show" id="ULe-CO-r5W"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -863,7 +869,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ChooseIMG:" destination="XYr-vm-ccr" eventType="touchUpInside" id="8Hf-1h-Edo"/>
+                                    <action selector="ChooseIMGClicked:" destination="XYr-vm-ccr" eventType="touchUpInside" id="CsP-Tp-Yj5"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEe-op-gxi">
@@ -873,26 +879,26 @@
                                 <rect key="frame" x="170" y="473" width="34" height="48"/>
                                 <state key="normal" title="POST" image="UniFeed"/>
                                 <connections>
-                                    <action selector="PostButtonClicked:" destination="XYr-vm-ccr" eventType="touchUpInside" id="NdG-gl-TKV"/>
+                                    <action selector="PostButtonClicked:" destination="XYr-vm-ccr" eventType="touchUpInside" id="U6V-Lh-lbM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PL-RA-xjb">
+                                <rect key="frame" x="317" y="178" width="31" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Post"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcc-zF-oro">
+                                <rect key="frame" x="7" y="178" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-nr-kpc">
                                 <rect key="frame" x="0.0" y="64" width="375" height="106"/>
                                 <color key="backgroundColor" red="0.78108728800051586" green="0.98084090414686975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PL-RA-xjb">
-                                <rect key="frame" x="317" y="178" width="31" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Post"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="250 haracters left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcc-zF-oro">
-                                <rect key="frame" x="7" y="178" width="92" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.77818226439790572" green="0.77818226439790572" blue="0.77818226439790572" alpha="0.77371453900709219" colorSpace="calibratedRGB"/>
                     </view>
@@ -905,15 +911,28 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.19897271814786499" green="0.4355237100258843" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2YM-4s-0WH" kind="show" id="NaA-Hd-qmv"/>
+                                </connections>
                             </button>
+                            <connections>
+                                <segue destination="2YM-4s-0WH" kind="show" id="g4Y-BX-S82"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="CharacterLimit" destination="Dcc-zF-oro" id="UoT-3g-Gnp"/>
+                        <outlet property="ChooseImageButton" destination="CSE-5I-tLM" id="3Bh-QK-hcU"/>
+                        <outlet property="PostBtn" destination="Ne3-FH-nug" id="DRX-C0-HAU"/>
+                        <outlet property="PostImage" destination="SEe-op-gxi" id="SQK-m1-OTD"/>
+                        <outlet property="PostText" destination="SNM-nr-kpc" id="ZZT-tJ-AmZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrL-2c-53t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2565.5" y="-1738.5"/>
+            <point key="canvasLocation" x="2575.5" y="-1738.5"/>
         </scene>
         <!--UserFindVC-->
         <scene sceneID="X1Q-6j-Tck">
@@ -932,7 +951,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="109" id="ZhS-GL-8Dx" customClass="UserFindTableViewCell" customModule="Uni_M8s" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="109"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZhS-GL-8Dx" id="yvt-6K-Lef">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="108.5"/>
@@ -944,22 +963,25 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK7-Qo-jZX">
                                                     <rect key="frame" x="81" y="8" width="81" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If3-AG-Kee">
                                                     <rect key="frame" x="81" y="37" width="77" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R02-2D-fMu">
                                                     <rect key="frame" x="255" y="8" width="75" height="39"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Add a m8">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="addAM8Button:" destination="ZhS-GL-8Dx" eventType="touchUpInside" id="1Io-Uk-bZw"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1066,8 +1088,11 @@
         <image name="UnionIMG" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g3Y-sA-xlu"/>
         <segue reference="DoQ-uC-CF9"/>
+        <segue reference="g3Y-sA-xlu"/>
         <segue reference="FaY-FF-Tgt"/>
+        <segue reference="uOK-rh-LSE"/>
+        <segue reference="g4Y-BX-S82"/>
+        <segue reference="ULe-CO-r5W"/>
     </inferredMetricsTieBreakers>
 </document>

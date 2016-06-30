@@ -184,8 +184,8 @@
 			children = (
 				69C730321D077AD5001E409C /* UniSearchUserVC.swift */,
 				69C730341D0784F4001E409C /* SearchedUsers.swift */,
-				69FAA6EC1D10CBA90038512D /* Unim8sUsersViewController.swift */,
 				E097A8F31D14AE4D0009782B /* UserFindTableViewCell.swift */,
+				69FAA6EC1D10CBA90038512D /* Unim8sUsersViewController.swift */,
 			);
 			name = "Uni Search Users";
 			sourceTree = "<group>";
@@ -278,8 +278,8 @@
 		E06BDF491D0B4FA60036063E /* Uni News Feed */ = {
 			isa = PBXGroup;
 			children = (
-				69FAA6E61D10AC180038512D /* UniPostVC.swift */,
 				69FAA6E81D10B1FA0038512D /* UniFeedViewController.swift */,
+				69FAA6E61D10AC180038512D /* UniPostVC.swift */,
 				69FAA6EA1D10B6D00038512D /* MainFeedCell.swift */,
 			);
 			name = "Uni News Feed";

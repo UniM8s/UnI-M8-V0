@@ -32,7 +32,7 @@ class HomeViewController: UICollectionViewController {
         
       NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("refreshPage"), name: "refreshPage", object: nil)
         
-      NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("UploadedPic"), name: "Pictures", object: nil)
+      NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("Posts"), name: "PostedPhoto.png", object: nil)
      
         refreshPage = UIRefreshControl()
         refreshPage.attributedTitle = NSAttributedString(string: "refresh")
@@ -71,7 +71,7 @@ class HomeViewController: UICollectionViewController {
                 // find objects related to our query request
                 for object in Objects! {
                     self.UUIDArray.append(object.valueForKey("UUID") as! String)
-                    self.PictureArray.append(object.valueForKey("PostedPics") as! PFFile)
+                   // self.PictureArray.append(object.valueForKey("PostedPics") as! PFFile)
                }
              
                 self.collectionView?.reloadData()

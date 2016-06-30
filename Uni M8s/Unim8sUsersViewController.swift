@@ -44,21 +44,24 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
         UniNameArray.removeAll(keepCapacity: false)
         UserImageFile.removeAll(keepCapacity: false)
         
-        var query = PFUser.query()
+        let query = PFUser.query()
+        
         query!.whereKey("username", notEqualTo: PFUser.currentUser()!.username!)
         
-        query!.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error:NSError?)  -> Void in
+        query!.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?)  -> Void in
             
             if error == nil{
                 
-                for object in objects{
+                for object in objects!{
                     
-                    self.NameArray.append(object.objectForKey("names")as String)
-                    self.UniNameArray.append(object.objectForKey("UniName")as String)
-                     self.UserImageFile.append(object.objectForKey("UserPicIMG")as PFFile)
+                    self.NameArray.append(object.objectForKey("names")as! String)
+                    self.UniNameArray.append(object.objectForKey("UniName")as! String)
+                    self.UserImageFile.append(object.objectForKey("UserPicIMG")as! PFFile)
                     
-                    
+                    self.UserResults.reloadData()
                 }
+            
+            
             }
             
         
@@ -83,7 +86,28 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let Cell:UserFindTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UserFindTableViewCell
+        
+        Cell.NameLabel.text = self.NameArray[indexPath.row]
+        Cell.UniNameLabel.text = self.UniNameArray[indexPath.row]
+        
+        
+        self.UserImageFile[indexPath.row].getDataInBackgroundWithBlock {
+            
+            (imageData:NSData?, error:NSError?) -> Void in
+            
+            if error == nil {
+                
+                let userImage = UIImage(data: imageData!)
+                
+                Cell.UserPicView.image = userImage
+                
+                
+            }
+        }
+        
         return Cell
+        
+        
         
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UniFeedViewController: UIViewController {
+class UniFeedViewController: UIViewController{
 
     @IBOutlet weak var ResultsCell: UITableView!
     
@@ -23,6 +23,8 @@ class UniFeedViewController: UIViewController {
         
         
         let PostButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target: self, action: #selector(UniFeedViewController.PostButtonClicked))
+        
+    
         
         let ButtonArray = NSArray(objects: PostButton)
         self.navigationItem.rightBarButtonItems = ButtonArray as? [UIBarButtonItem]
