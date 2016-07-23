@@ -21,12 +21,11 @@ class UniFeedViewController: UIViewController{
         
         ResultsCell.frame = CGRectMake(0, 0, Width, Height)
         
-        
         let PostButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target: self, action: #selector(UniFeedViewController.PostButtonClicked))
         
-    
+        let UniSearchBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(UniFeedViewController.UniSearchBtnClicked))
         
-        let ButtonArray = NSArray(objects: PostButton)
+        let ButtonArray = NSArray(objects: PostButton, UniSearchBtn)
         self.navigationItem.rightBarButtonItems = ButtonArray as? [UIBarButtonItem]
         
         
@@ -50,13 +49,21 @@ class UniFeedViewController: UIViewController{
     func PostButtonClicked() {
         
         print("Post Pressed")
-        
+         performSegueWithIdentifier("CreatePost", sender: self)
         
         
         
         
     }
 
+    func UniSearchBtnClicked(){
+        
+        print ("UniSearch Pressed")
+        performSegueWithIdentifier("UniUsersSegue", sender: self)
+    
+    
+    }
+    
 
 }
 

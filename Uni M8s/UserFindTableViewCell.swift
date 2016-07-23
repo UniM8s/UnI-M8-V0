@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class UserFindTableViewCell: UITableViewCell {
     
@@ -42,24 +43,48 @@ class UserFindTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    // For when the button is clicked....
+    // For when the button is clicked to become M8s....
+    
     @IBAction func addAM8Button(sender: AnyObject) {
         
         let title = M8Button.titleForState(.Normal)
         
-        if title == "m8s" {
+        if title == "Add a M8" {
           
-            let m8sObj = PFObject(className: "m8s")
+            var M8sObj = PFObject(className: "M8s")
             
-            m8sObj["UserfindVC"] = PFUser.currentUser()?.username
-            m8sObj["UserToFollow"] = M8Button
+            M8sObj["User"] = PFUser.currentUser()!.username
+            M8sObj["UserToM8"] = NameLabel.text
             
             
-          //  m8sObj.save()
+         M8sObj.saveInBackground()
+          
             
+            M8Button.setTitle("Add a M8", forState: UIControlState.Normal)
             
         }else {
             
+            
+            let M8query = PFQuery(className: "M8s")
+            
+            M8query.whereKey("User", equalTo: PFUser.currentUser()!.username!)
+            M8query.whereKey("UserToM8", equalTo: NameLabel.text!)
+            
+            let objects = M8query.findObjectsInBackground()
+          
+            
+            for object: PFObject in objects as! [PFObject] {
+                
+                
+            object.deleteInBackground()
+                
+            }
+            
+            M8Button.setTitle("Add a M8", forState: UIControlState.Normal)
+            
+
+            
+        
         }
         
     }

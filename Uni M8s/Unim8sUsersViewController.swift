@@ -44,6 +44,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
         UniNameArray.removeAll(keepCapacity: false)
         UserImageFile.removeAll(keepCapacity: false)
         
+        
         let query = PFUser.query()
         
         query!.whereKey("username", notEqualTo: PFUser.currentUser()!.username!)
@@ -51,11 +52,11 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
         query!.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?)  -> Void in
             
             if error == nil{
-                
+                //data to fetch for users!!!
                 for object in objects!{
                     
                     self.NameArray.append(object.objectForKey("names")as! String)
-                    self.UniNameArray.append(object.objectForKey("UniName")as! String)
+                    self.UniNameArray.append(object.objectForKey("uniName")as! String)
                     self.UserImageFile.append(object.objectForKey("UserPicIMG")as! PFFile)
                     
                     self.UserResults.reloadData()
@@ -85,7 +86,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let Cell:UserFindTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UserFindTableViewCell
+        let Cell:UserFindTableViewCell = tableView.dequeueReusableCellWithIdentifier("UserCell") as! UserFindTableViewCell
         
         Cell.NameLabel.text = self.NameArray[indexPath.row]
         Cell.UniNameLabel.text = self.UniNameArray[indexPath.row]
