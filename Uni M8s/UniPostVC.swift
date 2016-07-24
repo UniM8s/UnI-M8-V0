@@ -13,15 +13,10 @@ class UniPostVC: UIViewController, UITextViewDelegate, UINavigationControllerDel
    
     
     @IBOutlet weak var CancelButton: UIBarButtonItem!
-
     @IBOutlet weak var PostText: UITextView!
-   
     @IBOutlet weak var PostImage: UIImageView!
-    
     @IBOutlet weak var ChooseImageButton: UIButton!
-   
     @IBOutlet weak var CharacterLimit: UILabel!
-    
     @IBOutlet weak var PostBtn: UIButton!
     
     var hasImage = false
@@ -39,7 +34,7 @@ class UniPostVC: UIViewController, UITextViewDelegate, UINavigationControllerDel
         PostBtn.center = CGPointMake(theWidth-40, 170)
         ChooseImageButton.center = CGPointMake(46, 210)
         PostImage.frame = CGRectMake(5, 226, theWidth-10, theWidth-10)
-         PostBtn.enabled = true
+         PostBtn.enabled = false
         
     }
     
@@ -73,6 +68,14 @@ class UniPostVC: UIViewController, UITextViewDelegate, UINavigationControllerDel
         }
         
         CharacterLimit.text = "\(diff)"
+        
+        if diff == 90{
+            
+            //post button disabled
+           PostBtn.enabled = false
+        }else {
+            PostBtn.enabled = true
+        }
         
     }
     

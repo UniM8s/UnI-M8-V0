@@ -14,7 +14,7 @@ class MainFeedCell: UITableViewCell {
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var PostTxt: UITextView!
-    
+    @IBOutlet weak var postIMG: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

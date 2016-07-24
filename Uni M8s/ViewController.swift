@@ -206,7 +206,14 @@ var ActiveSignUp = true
                  
                     //Signup was successful
                 
-              
+                    let M8sObj = PFObject(className: "M8s")
+                    
+                    M8sObj["User"] = PFUser.currentUser()!.username
+                    M8sObj["UserToM8"] = PFUser.currentUser()!.username
+                    
+                    
+                    M8sObj.saveInBackground()
+
                     
                 } else {
                     

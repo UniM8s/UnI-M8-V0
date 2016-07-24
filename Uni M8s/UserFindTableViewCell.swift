@@ -51,7 +51,7 @@ class UserFindTableViewCell: UITableViewCell {
         
         if title == "Add a M8" {
           
-            var M8sObj = PFObject(className: "M8s")
+            let M8sObj = PFObject(className: "M8s")
             
             M8sObj["User"] = PFUser.currentUser()!.username
             M8sObj["UserToM8"] = NameLabel.text
@@ -70,10 +70,10 @@ class UserFindTableViewCell: UITableViewCell {
             M8query.whereKey("User", equalTo: PFUser.currentUser()!.username!)
             M8query.whereKey("UserToM8", equalTo: NameLabel.text!)
             
-            let objects = M8query.findObjectsInBackground()
+            let objects = try! M8query.findObjects()
           
             
-            for object: PFObject in objects as! [PFObject] {
+            for object in objects {
                 
                 
             object.deleteInBackground()
