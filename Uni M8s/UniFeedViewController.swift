@@ -53,7 +53,8 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
     func refresher() {
         
         print("refresher table")
-        self.refresh.endRefreshing()
+        
+        refreshPostedResults()
         
         
     }
@@ -100,6 +101,8 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
                     
                     
                 }
+                
+                self.refresh.endRefreshing()
             }
             
         }
@@ -122,6 +125,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
         
     override func viewDidAppear(animated: Bool) {
         
+        refreshPostedResults()
         
     }
     
