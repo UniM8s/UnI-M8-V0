@@ -58,20 +58,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-
-    override func viewWillAppear(animated: Bool) {
-        
-        self.navigationItem.hidesBackButton = true
-        
-        
-    }
-        
-    override func viewDidAppear(animated: Bool) {
+    func refreshPostedResults() {
         
         m8sArray.removeAll(keepCapacity: false)
         resultNameArray.removeAll(keepCapacity: false)
@@ -97,7 +84,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
         
         PostQuery.findObjectsInBackgroundWithBlock() {
             (objects:[PFObject]?, error:NSError?) -> Void in
-        
+            
             
             if error == nil {
                 
@@ -108,7 +95,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
                     self.resultPostArray.append(object.objectForKey("PostText") as! String)
                     self.resultHasImageArray.append(object.objectForKey("hasImage") as! String)
                     self.resultImageFiles.append(object.objectForKey("PostedPhotos")as! PFFile)
-
+                    
                     self.ResultsCell.reloadData()
                     
                     
@@ -116,6 +103,25 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
             }
             
         }
+ 
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+
+    override func viewWillAppear(animated: Bool) {
+        
+        self.navigationItem.hidesBackButton = true
+        
+        
+    }
+        
+    override func viewDidAppear(animated: Bool) {
+        
         
     }
     
