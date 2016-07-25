@@ -46,6 +46,8 @@
 		E04F61BD1CE39A780029160C /* Parse.FrameworkSDK in Resources */ = {isa = PBXBuildFile; fileRef = E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */; };
 		E04F61C01CE7DADC0029160C /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */; };
 		E04F61C11CE7DADC0029160C /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */; };
+		E05669B31D4568410005F118 /* M8ListChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05669B21D4568410005F118 /* M8ListChatVC.swift */; };
+		E05669B51D467D370005F118 /* M8sListChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05669B41D467D370005F118 /* M8sListChatCell.swift */; };
 		E097A8F41D14AE4D0009782B /* UserFindTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097A8F31D14AE4D0009782B /* UserFindTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,8 @@
 		E04F61BC1CE39A780029160C /* Parse.FrameworkSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Parse.FrameworkSDK; sourceTree = "<group>"; };
 		E04F61BE1CE7DADC0029160C /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		E04F61BF1CE7DADC0029160C /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		E05669B21D4568410005F118 /* M8ListChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M8ListChatVC.swift; sourceTree = "<group>"; };
+		E05669B41D467D370005F118 /* M8sListChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M8sListChatCell.swift; sourceTree = "<group>"; };
 		E097A8F31D14AE4D0009782B /* UserFindTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFindTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +229,7 @@
 				69C730301D0779CE001E409C /* Student Matching */,
 				69C730311D0779FB001E409C /* Uni Search Users */,
 				E06BDF491D0B4FA60036063E /* Uni News Feed */,
+				E05669B11D4567A70005F118 /* Union Chat */,
 			);
 			path = "Uni M8s";
 			sourceTree = "<group>";
@@ -275,11 +280,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E05669B11D4567A70005F118 /* Union Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E05669B21D4568410005F118 /* M8ListChatVC.swift */,
+				E05669B41D467D370005F118 /* M8sListChatCell.swift */,
+			);
+			name = "Union Chat";
+			sourceTree = "<group>";
+		};
 		E06BDF491D0B4FA60036063E /* Uni News Feed */ = {
 			isa = PBXGroup;
 			children = (
-				69FAA6E81D10B1FA0038512D /* UniFeedViewController.swift */,
 				69FAA6E61D10AC180038512D /* UniPostVC.swift */,
+				69FAA6E81D10B1FA0038512D /* UniFeedViewController.swift */,
 				69FAA6EA1D10B6D00038512D /* MainFeedCell.swift */,
 			);
 			name = "Uni News Feed";
@@ -431,6 +445,7 @@
 				69D0A7741CEE639D004FB9F1 /* ForgotPasswordViewController.swift in Sources */,
 				69FAA6EB1D10B6D00038512D /* MainFeedCell.swift in Sources */,
 				69C730351D0784F4001E409C /* SearchedUsers.swift in Sources */,
+				E05669B51D467D370005F118 /* M8sListChatCell.swift in Sources */,
 				69C730331D077AD5001E409C /* UniSearchUserVC.swift in Sources */,
 				E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */,
 				69C730241CFA3B0C001E409C /* HeaderInfoView.swift in Sources */,
@@ -440,6 +455,7 @@
 				E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */,
 				69FAA6ED1D10CBA90038512D /* Unim8sUsersViewController.swift in Sources */,
 				69FAA6E91D10B1FA0038512D /* UniFeedViewController.swift in Sources */,
+				E05669B31D4568410005F118 /* M8ListChatVC.swift in Sources */,
 				E097A8F41D14AE4D0009782B /* UserFindTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
