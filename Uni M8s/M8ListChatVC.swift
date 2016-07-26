@@ -39,7 +39,7 @@ class M8ListChatVC: UITableViewController {
         
         //Find user M8s
         let M8ListQuery = PFQuery(className: "M8s")
-        M8ListQuery.whereKey("M8s", equalTo: User)
+        M8ListQuery.whereKey("UserToM8", equalTo: User)
         M8ListQuery.findObjectsInBackgroundWithBlock{ (objects: [PFObject]?, error: NSError?) -> Void in
         
             if error == nil {
@@ -50,7 +50,7 @@ class M8ListChatVC: UITableViewController {
                 //find related objects for user M8s
                 for object in objects! {
                     
-                    self.M8sListArray.append(object.valueForKey("UserToM8") as! String)
+                    self.M8sListArray.append(object.valueForKey("User") as! String)
                     
                 }
             

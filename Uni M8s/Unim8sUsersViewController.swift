@@ -29,6 +29,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
         
         UserResults.frame = CGRectMake(0, 0, Width, Height)
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,7 +81,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return 65
+        return 64
         
     }
     
@@ -90,6 +91,28 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
         
         Cell.NameLabel.text = self.NameArray[indexPath.row]
         Cell.UniNameLabel.text = self.UniNameArray[indexPath.row]
+        
+        let m8query = PFQuery(className: "M8s")
+        
+        m8query.whereKey("User", equalTo: PFUser.currentUser()!.username!)
+        m8query.whereKey("UserToM8", equalTo: Cell.NameLabel.text!)
+        
+        m8query.countObjectsInBackgroundWithBlock { (count:Int32, error:NSError?) -> Void in
+            
+            if error == nil {
+                 self.UserResults.reloadData()
+                
+                if count == 0 {
+                    
+                    Cell.M8Button.setTitle("Add M8", forState: UIControlState.Normal)
+                }else{
+                    
+                    
+                    Cell.M8Button.setTitle("M8s", forState: UIControlState.Normal)
+                    
+                }
+            }
+        }
         
         
         self.UserImageFile[indexPath.row].getDataInBackgroundWithBlock {

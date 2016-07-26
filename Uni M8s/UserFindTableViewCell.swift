@@ -49,18 +49,18 @@ class UserFindTableViewCell: UITableViewCell {
         
         let title = M8Button.titleForState(.Normal)
         
-        if title == "Add a M8" {
+        if title == "Add M8" {
           
             let M8sObj = PFObject(className: "M8s")
             
             M8sObj["User"] = PFUser.currentUser()!.username
             M8sObj["UserToM8"] = NameLabel.text
             
-            
+    
          M8sObj.saveInBackground()
           
             
-            M8Button.setTitle("Add a M8", forState: UIControlState.Normal)
+            M8Button.setTitle("Add M8", forState: UIControlState.Normal)
             
         }else {
             
@@ -78,11 +78,13 @@ class UserFindTableViewCell: UITableViewCell {
                 
             object.deleteInBackground()
                 
+                
+                
             }
             
-            M8Button.setTitle("Add a M8", forState: UIControlState.Normal)
+            M8Button.setTitle("M8s", forState: UIControlState.Normal)
             
-
+            
             
         
         }
