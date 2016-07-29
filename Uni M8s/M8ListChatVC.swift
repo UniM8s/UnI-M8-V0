@@ -39,24 +39,25 @@ class M8ListChatVC: UITableViewController {
         
         //Find user M8s
         let M8ListQuery = PFQuery(className: "M8s")
-        M8ListQuery.whereKey("UserToM8", equalTo: User)
+        M8ListQuery.whereKey("User", equalTo: User)
         M8ListQuery.findObjectsInBackgroundWithBlock{ (objects: [PFObject]?, error: NSError?) -> Void in
         
             if error == nil {
                 
                 
             self.M8sListArray.removeAll(keepCapacity: false)
+           
                 
                 //find related objects for user M8s
                 for object in objects! {
                     
-                    self.M8sListArray.append(object.valueForKey("User") as! String)
+                    self.M8sListArray.append(object.valueForKey("UserToM8") as! String)
                     
                 }
             
                 //find users m8d
                 let M8InfoQuery = PFUser.query()
-                M8InfoQuery?.whereKey("User", containedIn: self.M8sListArray)
+                M8InfoQuery?.whereKey("UserToM8", containedIn: self.M8sListArray)
                 M8InfoQuery?.addDescendingOrder("createdAt")
                 M8InfoQuery?.findObjectsInBackgroundWithBlock({(objects: [PFObject]?, error: NSError?) -> Void in
                     

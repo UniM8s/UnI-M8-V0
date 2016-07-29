@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -285,7 +285,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Pic Cell" reuseIdentifier="PicCell" id="XBO-1D-HIe" customClass="PostedPics" customModule="Uni_M8s" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="332" width="106" height="106"/>
+                                <rect key="frame" x="0.0" y="268" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
@@ -303,7 +303,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderInfo" id="L3f-dH-eib" customClass="HeaderInfoView" customModule="Uni_M8s" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="64" width="375" height="268"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUN-BO-9wB">
@@ -879,7 +879,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lG-cC-zOj">
-                                                    <rect key="frame" x="106" y="8" width="214" height="55.5"/>
+                                                    <rect key="frame" x="117" y="47" width="214" height="55.5"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -892,7 +892,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="2YM-4s-0WH" id="Qur-YS-XDg"/>
+                                    <outlet property="dataSource" destination="2YM-4s-0WH" id="IT2-KO-4qq"/>
                                     <outlet property="delegate" destination="2YM-4s-0WH" id="2s9-W2-ea4"/>
                                 </connections>
                             </tableView>
@@ -1067,12 +1067,19 @@
                                                         <action selector="addAM8Button:" destination="ZhS-GL-8Dx" eventType="touchUpInside" id="1Io-Uk-bZw"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UniEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1L-Jn-qT2">
+                                                    <rect key="frame" x="269" y="51" width="67" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="M8Button" destination="R02-2D-fMu" id="G8S-oA-rEn"/>
                                             <outlet property="NameLabel" destination="cK7-Qo-jZX" id="MLp-GG-vCC"/>
                                             <outlet property="UniNameLabel" destination="If3-AG-Kee" id="0Nd-ME-ELH"/>
+                                            <outlet property="UserEmailLbl" destination="n1L-Jn-qT2" id="b5G-aa-B2h"/>
                                             <outlet property="UserPicView" destination="bRw-ZX-eTn" id="sWS-1J-q3D"/>
                                         </connections>
                                     </tableViewCell>
@@ -1174,9 +1181,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="DoQ-uC-CF9"/>
         <segue reference="g3Y-sA-xlu"/>
-        <segue reference="hzj-HU-xad"/>
+        <segue reference="FaY-FF-Tgt"/>
+        <segue reference="ULe-CO-r5W"/>
         <segue reference="NaA-Hd-qmv"/>
         <segue reference="MjE-ir-J9z"/>
-        <segue reference="ULe-CO-r5W"/>
     </inferredMetricsTieBreakers>
 </document>

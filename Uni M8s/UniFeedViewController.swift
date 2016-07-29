@@ -33,6 +33,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
         
         ResultsCell.frame = CGRectMake(0, 0, Width, Height)
         
+        
         let PostButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target: self, action: #selector(UniFeedViewController.PostButtonClicked))
         
         let UniSearchBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(UniFeedViewController.UniSearchBtnClicked))
@@ -45,7 +46,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
         refresh.addTarget(self, action: #selector(UniFeedViewController.refresher), forControlEvents: UIControlEvents.ValueChanged)
         self.ResultsCell.addSubview(refresh)
         
-        
+        ResultsCell.reloadData()
 
   
     }
@@ -66,7 +67,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
         resultImageFiles.removeAll(keepCapacity: false)
         resultPostArray.removeAll(keepCapacity: false)
         resultHasImageArray.removeAll(keepCapacity: false)
-        resultImageFiles.removeAll(keepCapacity: false)
+        resultPostImageFile.removeAll(keepCapacity: false)
         
         
         
@@ -95,7 +96,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
                     self.resultImageFiles.append(object.objectForKey("UserPicIMG") as! PFFile)
                     self.resultPostArray.append(object.objectForKey("PostText") as! String)
                     self.resultHasImageArray.append(object.objectForKey("hasImage") as! String)
-                    self.resultImageFiles.append(object.objectForKey("PostedPhotos")as! PFFile)
+                    //self.resultPostImageFile.append(object.objectForKey("PostedPhotos")as! PFFile)
                     
                     self.ResultsCell.reloadData()
                     
@@ -139,6 +140,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
             
             return self.view.frame.size.width - 10 
 
+            
         } else {
         
         
@@ -162,9 +164,9 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
         resultImageFiles[indexPath.row].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
             
             if error == nil {
-                
+               
                 let UserImage = UIImage(data: imageData!)
-                FeedCell.ImageView.image = UserImage
+                 FeedCell.ImageView.image = UserImage
                 
                 
             }
