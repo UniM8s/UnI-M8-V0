@@ -73,7 +73,7 @@ class UniSearchUserVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let profileCell:SearchedUsers = tableView.dequeueReusableCellWithIdentifier("User Cell") as! SearchedUsers
+        let profileCell: SearchedUsers = tableView.dequeueReusableCellWithIdentifier("User Cell") as! SearchedUsers
         
         profileCell.UserName.text = self.nameArray[indexPath.row]
         

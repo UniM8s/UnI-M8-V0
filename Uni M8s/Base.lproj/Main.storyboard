@@ -768,10 +768,6 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUU-sg-0qk">
-                                            <rect key="frame" x="271" y="-8" width="104" height="99.5"/>
-                                            <state key="normal" title="Chat"/>
-                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e40-bP-Nsf">
                                             <rect key="frame" x="8" y="8" width="81" height="75.5"/>
                                         </imageView>
@@ -787,10 +783,21 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXp-eV-OPG">
+                                            <rect key="frame" x="290" y="62" width="77" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUU-sg-0qk">
+                                            <rect key="frame" x="271" y="-8" width="104" height="99.5"/>
+                                            <state key="normal" title="Chat"/>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="AgeLabel" destination="RRW-Gx-kcs" id="nLh-WU-1t1"/>
+                                    <outlet property="EmailLabel" destination="GXp-eV-OPG" id="zru-2k-4Ae"/>
                                     <outlet property="NameLabel" destination="NUl-iM-W2P" id="aof-je-awd"/>
                                     <outlet property="UniNameLabel" destination="ccX-y1-Afa" id="Kgj-e2-ln6"/>
                                     <outlet property="UserImage" destination="e40-bP-Nsf" id="Hu8-6K-udS"/>
@@ -806,7 +813,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8W-cP-ecr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717.5" y="-2560.5"/>
+            <point key="canvasLocation" x="1635.5" y="-2509.5"/>
         </scene>
         <!--Unions-->
         <scene sceneID="mmV-Gp-Yyq">

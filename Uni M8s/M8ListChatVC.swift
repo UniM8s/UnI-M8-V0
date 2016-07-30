@@ -9,17 +9,18 @@
 import UIKit
 import Parse
 
-var User = String()
+var User = PFUser.currentUser()?.username!
 var M8List = String()
 
 
-class M8ListChatVC: UITableViewController {
+class M8ListChatVC: UITableViewController //, UITableViewDataSource, UITableViewDelegate{
+    {
 
+  
    var userNameArray = [String]()
    var UserPicArray = [PFFile]()
-    
-    //User added M8's Array
-    var M8sListArray = [String]()
+   //User added M8's Array
+   var M8sListArray = [String]()
     
     
     
@@ -28,7 +29,64 @@ class M8ListChatVC: UITableViewController {
 
         self.navigationItem.title = M8List.uppercaseString
         
-        LoadM8s()
+        //Find user M8s
+        let M8ListQuery = PFQuery(className: "M8s")
+        M8ListQuery.whereKey("User", equalTo: User!)
+        M8ListQuery.findObjectsInBackgroundWithBlock{ (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                self.tableView.reloadData()
+                
+                self.M8sListArray.removeAll(keepCapacity: false)
+                
+                
+                //find related objects for user M8s
+                for object in objects! {
+                    
+                    self.M8sListArray.append(object.valueForKey("UserToM8") as! String)
+                    
+                }
+                
+                //find users m8d
+                let M8InfoQuery = PFUser.query()
+                M8InfoQuery?.whereKey("username", containedIn: self.M8sListArray)
+                M8InfoQuery?.addDescendingOrder("createdAt")
+                M8InfoQuery?.findObjectsInBackgroundWithBlock({(objects: [PFObject]?, error: NSError?) -> Void in
+                    
+                    if error == nil {
+                        self.userNameArray.removeAll(keepCapacity: false)
+                        self.UserPicArray.removeAll(keepCapacity: false)
+                        
+                        
+                        
+                        //find related objects in user class
+                        for object in objects! {
+                            
+                            self.userNameArray.append(object.objectForKey("names") as! String)
+                            self.UserPicArray.append(object.objectForKey("UserPicIMG") as! PFFile)
+                            
+                            self.tableView.reloadData()
+                            
+                        }
+                    }else{
+                        
+                        print(error!.localizedDescription)
+                        
+                        
+                        
+                    }
+                    
+                    
+                })
+                
+            }else{
+                
+                print(error!.localizedDescription)
+                
+            }
+            
+        }
+
         
         
     }
@@ -37,60 +95,6 @@ class M8ListChatVC: UITableViewController {
     
     func LoadM8s(){
         
-        //Find user M8s
-        let M8ListQuery = PFQuery(className: "M8s")
-        M8ListQuery.whereKey("User", equalTo: User)
-        M8ListQuery.findObjectsInBackgroundWithBlock{ (objects: [PFObject]?, error: NSError?) -> Void in
-        
-            if error == nil {
-                
-                
-            self.M8sListArray.removeAll(keepCapacity: false)
-           
-                
-                //find related objects for user M8s
-                for object in objects! {
-                    
-                    self.M8sListArray.append(object.valueForKey("UserToM8") as! String)
-                    
-                }
-            
-                //find users m8d
-                let M8InfoQuery = PFUser.query()
-                M8InfoQuery?.whereKey("UserToM8", containedIn: self.M8sListArray)
-                M8InfoQuery?.addDescendingOrder("createdAt")
-                M8InfoQuery?.findObjectsInBackgroundWithBlock({(objects: [PFObject]?, error: NSError?) -> Void in
-                    
-                    if error == nil {
-                        self.userNameArray.removeAll(keepCapacity: false)
-                        self.UserPicArray.removeAll(keepCapacity: false)
-                        
-                        //find related objects in user class
-                        for object in objects! {
-                        
-                            self.userNameArray.append(object.objectForKey("names") as! String)
-                            self.UserPicArray.append(object.objectForKey("UserPicIMG") as! PFFile)
-                            self.tableView.reloadData()
-                        
-                        }
-                    }else{
-                        
-                    print(error!.localizedDescription)
-                    
-                    
-                    
-                    }
-            
-                
-                })
-                
-            }else{
-            
-            print(error!.localizedDescription)
-            
-            }
-            
-            }
         
     }
     
@@ -103,10 +107,7 @@ class M8ListChatVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+    
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -117,6 +118,7 @@ class M8ListChatVC: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let M8Cell: M8sListChatCell = tableView.dequeueReusableCellWithIdentifier("M8Cell") as! M8sListChatCell
         M8Cell.NameLabel.text = userNameArray[indexPath.row]
+       
         UserPicArray[indexPath.row].getDataInBackgroundWithBlock { (data:NSData?, error: NSError?) -> Void in
             
             if error == nil {
