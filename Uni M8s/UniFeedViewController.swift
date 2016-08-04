@@ -82,7 +82,7 @@ class UniFeedViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         let PostQuery = PFQuery(className: "Posts")
         PostQuery.whereKey("UsernameEmail", containedIn: m8sArray)
-        PostQuery.addAscendingOrder("createdAt")
+        PostQuery.addDescendingOrder("createdAt")
         
         PostQuery.findObjectsInBackgroundWithBlock() {
             (objects:[PFObject]?, error:NSError?) -> Void in
