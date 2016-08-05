@@ -13,7 +13,7 @@ import Parse
 var M8Name = ""
 var M8ProfileName = ""
 
-class ConversationVC: UIViewController {
+class ConversationVC: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var ResultScrollView: UIScrollView!
     
@@ -36,6 +36,11 @@ class ConversationVC: UIViewController {
     
     let MessageLabel = UILabel(frame: CGRectMake(5, 8, 200, 20))
     
+    var messageX:CGFloat = 37.0
+    var messageY:CGFloat = 26.0
+    
+    var messageArray = [String]()
+    var senderArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +65,8 @@ class ConversationVC: UIViewController {
         MessageLabel.backgroundColor = UIColor.clearColor()
         MessageLabel.textColor = UIColor.lightGrayColor()
         MessageTextView.addSubview(MessageLabel)
-
-        // Do any additional setup after loading the view.
+        
+        refreshChatResults()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +74,42 @@ class ConversationVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func refreshChatResults() {
+        
+        let Width = view.frame.size.width
+        let Height = view.frame.size.height
+        
+        messageX = 37.0
+        messageY = 26.0
+        
+        messageArray.removeAll(keepCapacity: false)
+        senderArray.removeAll(keepCapacity: false)
+        
+        let Predicate1 = NSPredicate(format: "sender = %@ AND reieved %@", User!, M8Name)
+        var ChatQuery1: PFQuery = PFQuery(className: "messages", predicate: Predicate1)
+        
+        let Predicate2 = NSPredicate(format: "sender = %@ AND reieved %@", M8Name, User!)
+        var ChatQuery2: PFQuery = PFQuery(className: "messages", predicate: Predicate2)
+        
+        var Query = PFQuery.orQueryWithSubqueries([ChatQuery1,ChatQuery2])
+        Query.addAscendingOrder("createdAt")
+        Query.findObjectsInBackgroundWithBlock {
+            (objects:[PFObject]? , error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                for object in objects! {
+                    
+                    self.senderArray.append(object.objectForKey("sender") as! String)
+                    self.messageArray.append(object.objectForKey("messages") as! String)
+                }
+            }
+            
+        }
+        
+        
+        
+    }
  
 
 }
