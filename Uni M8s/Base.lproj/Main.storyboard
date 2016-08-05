@@ -277,6 +277,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" id="4cT-Ab-jN9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kdu-qL-6EH">
                             <size key="itemSize" width="106" height="106"/>
                             <size key="headerReferenceSize" width="43" height="268"/>
@@ -328,7 +329,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Gender" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jrn-AJ-pPn">
-                                    <rect key="frame" x="8" y="177" width="240" height="33"/>
+                                    <rect key="frame" x="8" y="177" width="70" height="33"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -348,6 +349,7 @@
                                     </state>
                                 </button>
                             </subviews>
+                            <color key="backgroundColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <outlet property="Biotext" destination="VTS-L5-Xv6" id="wSg-HZ-X3C"/>
                                 <outlet property="EditProfileChat" destination="AFY-fp-KSJ" id="MAL-IH-zip"/>
@@ -593,7 +595,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R2h-os-Uni">
-                                <rect key="frame" x="0.0" y="454" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="431" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="383" id="7vg-lT-NW1"/>
                                     <constraint firstAttribute="height" constant="44" id="WNe-re-x96"/>
@@ -603,7 +605,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FJK-By-9ml" firstAttribute="centerX" secondItem="Klc-d6-xkn" secondAttribute="centerX" id="1xg-Cs-BZI"/>
                             <constraint firstItem="R2h-os-Uni" firstAttribute="top" secondItem="Uxa-65-3xa" secondAttribute="bottom" id="B9l-Hn-a02"/>
@@ -746,6 +748,60 @@
             </objects>
             <point key="canvasLocation" x="1096.5" y="-1738.5"/>
         </scene>
+        <!--ConversationVC-->
+        <scene sceneID="ShN-ul-OUI">
+            <objects>
+                <viewController id="L6c-Q9-uYO" customClass="ConversationVC" customModule="Uni_M8s" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wSf-tf-wsH"/>
+                        <viewControllerLayoutGuide type="bottom" id="s57-A1-W1X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="38v-fe-wG5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-Lg-Ipb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="463"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f67-va-Sre">
+                                <rect key="frame" x="0.0" y="525" width="375" height="93"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6p-M7-vpJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RXy-TZ-ceC">
+                                        <rect key="frame" x="0.0" y="24" width="318" height="77"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gow-vq-pF4">
+                                        <rect key="frame" x="329" y="24" width="46" height="69"/>
+                                        <state key="normal" title="Send"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="FrameTextView" destination="f67-va-Sre" id="dYn-3m-Nry"/>
+                        <outlet property="LineLabel" destination="r6p-M7-vpJ" id="9Gk-jy-ucy"/>
+                        <outlet property="MessageTextView" destination="RXy-TZ-ceC" id="5Bs-Ux-ikk"/>
+                        <outlet property="ResultScrollView" destination="Q7h-Lg-Ipb" id="Dk5-FS-jtN"/>
+                        <outlet property="SendMessageBtn" destination="Gow-vq-pF4" id="nwQ-Q1-oMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bck-GL-eeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.5" y="-3269.5"/>
+        </scene>
         <!--List ChatVC-->
         <scene sceneID="DQc-tm-Lbp">
             <objects>
@@ -803,10 +859,13 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="L6c-Q9-uYO" kind="show" identifier="GoToConvoVC" id="TOR-ep-a21"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8W-cP-ecr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635.5" y="-2509.5"/>
+            <point key="canvasLocation" x="1653.5" y="-2529.5"/>
         </scene>
         <!--Unions-->
         <scene sceneID="mmV-Gp-Yyq">
@@ -819,7 +878,7 @@
                     <view key="view" contentMode="scaleToFill" id="WNq-2h-Xge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Unions" id="ZPf-zg-MRg">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Sqa-cc-y6u">
@@ -987,7 +1046,7 @@
                                 </connections>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.77818226439790572" green="0.77818226439790572" blue="0.77818226439790572" alpha="0.77371453900709219" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.51725494859999999" green="1" blue="0.98416185379999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Make A Post" id="y3Z-aX-7jj">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Omr-eV-OfY">
