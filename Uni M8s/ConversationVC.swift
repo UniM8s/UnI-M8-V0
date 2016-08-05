@@ -103,6 +103,62 @@ class ConversationVC: UIViewController, UIScrollViewDelegate {
                     self.senderArray.append(object.objectForKey("sender") as! String)
                     self.messageArray.append(object.objectForKey("messages") as! String)
                 }
+                
+                for var i = 0; i <= self.messageArray.count-1; i += 1 {
+                    
+                    if self.senderArray[i] == User {
+                        
+                        let messageLabel:UILabel = UILabel()
+                        messageLabel.frame = CGRectMake(0, 0, self.ResultScrollView.frame.size.width-94, CGFloat.max)
+                        messageLabel.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                        messageLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+                        messageLabel.textAlignment = NSTextAlignment.Left
+                        messageLabel.numberOfLines = 0
+                        messageLabel.font = UIFont(name: "Helvetica Neuse", size: 17)
+                        messageLabel.textColor = UIColor.blueColor()
+                        messageLabel.text = self.messageArray[i]
+                        messageLabel.sizeToFit()
+                        messageLabel.layer.zPosition = 20
+                        messageLabel.frame.origin.x = (self.ResultScrollView.frame.size.width - self.messageX) -
+                             messageLabel.frame.size.width
+                        messageLabel.frame.origin.y = self.messageY
+                        self.ResultScrollView.addSubview(messageLabel)
+                        self.messageY += messageLabel.frame.size.height + 30
+                        
+                        
+                        self.ResultScrollView.contentSize = CGSizeMake(Width, self.messageY)
+                        
+                        
+                    
+                    
+                    }else {
+                        
+                        let messageLabel:UILabel = UILabel()
+                        messageLabel.frame = CGRectMake(0, 0, self.ResultScrollView.frame.size.width-94, CGFloat.max)
+                        messageLabel.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                        messageLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+                        messageLabel.textAlignment = NSTextAlignment.Left
+                        messageLabel.numberOfLines = 0
+                        messageLabel.font = UIFont(name: "Helvetica Neuse", size: 17)
+                        messageLabel.textColor = UIColor.blueColor()
+                        messageLabel.text = self.messageArray[i]
+                        messageLabel.sizeToFit()
+                        messageLabel.layer.zPosition = 20
+                        messageLabel.frame.origin.x = self.messageX
+                            
+                        messageLabel.frame.origin.y = self.messageY
+                        self.ResultScrollView.addSubview(messageLabel)
+                        self.messageY += messageLabel.frame.size.height + 30
+                        
+                        
+                        self.ResultScrollView.contentSize = CGSizeMake(Width, self.messageY)
+                        
+                        
+                        
+                        
+                    }
+                }
+                
             }
             
         }
