@@ -18,6 +18,8 @@ class M8sListChatCell: UITableViewCell {
     
     @IBOutlet weak var UserImage: UIImageView!
     
+    @IBOutlet weak var EmailLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,5 +30,6 @@ class M8sListChatCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }

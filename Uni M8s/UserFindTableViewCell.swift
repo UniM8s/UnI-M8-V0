@@ -18,6 +18,8 @@ class UserFindTableViewCell: UITableViewCell {
     
     @IBOutlet weak var UniNameLabel: UILabel!
     
+    @IBOutlet weak var UserEmailLbl: UILabel!
+    
     @IBOutlet weak var M8Button: UIButton!
     
     
@@ -54,7 +56,7 @@ class UserFindTableViewCell: UITableViewCell {
             let M8sObj = PFObject(className: "M8s")
             
             M8sObj["User"] = PFUser.currentUser()!.username
-            M8sObj["UserToM8"] = NameLabel.text
+            M8sObj["UserToM8"] = UserEmailLbl.text
             
     
          M8sObj.saveInBackground()
@@ -68,7 +70,7 @@ class UserFindTableViewCell: UITableViewCell {
             let M8query = PFQuery(className: "M8s")
             
             M8query.whereKey("User", equalTo: PFUser.currentUser()!.username!)
-            M8query.whereKey("UserToM8", equalTo: NameLabel.text!)
+            M8query.whereKey("UserToM8", equalTo: UserEmailLbl.text!)
             
             let objects = try! M8query.findObjects()
           

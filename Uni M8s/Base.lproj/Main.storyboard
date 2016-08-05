@@ -285,7 +285,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Pic Cell" reuseIdentifier="PicCell" id="XBO-1D-HIe" customClass="PostedPics" customModule="Uni_M8s" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="332" width="106" height="106"/>
+                                <rect key="frame" x="0.0" y="268" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
@@ -303,7 +303,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderInfo" id="L3f-dH-eib" customClass="HeaderInfoView" customModule="Uni_M8s" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="64" width="375" height="268"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUN-BO-9wB">
@@ -768,10 +768,6 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUU-sg-0qk">
-                                            <rect key="frame" x="271" y="-8" width="104" height="99.5"/>
-                                            <state key="normal" title="Chat"/>
-                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e40-bP-Nsf">
                                             <rect key="frame" x="8" y="8" width="81" height="75.5"/>
                                         </imageView>
@@ -787,10 +783,15 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUU-sg-0qk">
+                                            <rect key="frame" x="271" y="-8" width="104" height="99.5"/>
+                                            <state key="normal" title="Chat"/>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="AgeLabel" destination="RRW-Gx-kcs" id="nLh-WU-1t1"/>
+                                    <outlet property="EmailLabel" destination="GXp-eV-OPG" id="zru-2k-4Ae"/>
                                     <outlet property="NameLabel" destination="NUl-iM-W2P" id="aof-je-awd"/>
                                     <outlet property="UniNameLabel" destination="ccX-y1-Afa" id="Kgj-e2-ln6"/>
                                     <outlet property="UserImage" destination="e40-bP-Nsf" id="Hu8-6K-udS"/>
@@ -806,7 +807,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8W-cP-ecr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717.5" y="-2560.5"/>
+            <point key="canvasLocation" x="1635.5" y="-2509.5"/>
         </scene>
         <!--Unions-->
         <scene sceneID="mmV-Gp-Yyq">
@@ -819,23 +820,25 @@
                     <view key="view" contentMode="scaleToFill" id="WNq-2h-Xge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj9-8I-Frx">
-                                <rect key="frame" x="143" y="72" width="89" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Unions" id="ZPf-zg-MRg">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Sqa-cc-y6u">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pj9-8I-Frx">
+                                <rect key="frame" x="270" y="7" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Chat to a M8"/>
                                 <connections>
                                     <segue destination="T1u-WZ-r7I" kind="show" id="31v-02-1rI"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Unions" id="ZPf-zg-MRg"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2J-wr-ITQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1583.5" y="-1738.5"/>
+            <point key="canvasLocation" x="1653.5" y="-1738.5"/>
         </scene>
         <!--UniFeed-->
         <scene sceneID="Z4T-eX-dy7">
@@ -879,7 +882,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lG-cC-zOj">
-                                                    <rect key="frame" x="106" y="8" width="214" height="55.5"/>
+                                                    <rect key="frame" x="117" y="47" width="214" height="55.5"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -892,7 +895,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="2YM-4s-0WH" id="Qur-YS-XDg"/>
+                                    <outlet property="dataSource" destination="2YM-4s-0WH" id="IT2-KO-4qq"/>
                                     <outlet property="delegate" destination="2YM-4s-0WH" id="2s9-W2-ea4"/>
                                 </connections>
                             </tableView>
@@ -1067,12 +1070,19 @@
                                                         <action selector="addAM8Button:" destination="ZhS-GL-8Dx" eventType="touchUpInside" id="1Io-Uk-bZw"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UniEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1L-Jn-qT2">
+                                                    <rect key="frame" x="269" y="51" width="67" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="M8Button" destination="R02-2D-fMu" id="G8S-oA-rEn"/>
                                             <outlet property="NameLabel" destination="cK7-Qo-jZX" id="MLp-GG-vCC"/>
                                             <outlet property="UniNameLabel" destination="If3-AG-Kee" id="0Nd-ME-ELH"/>
+                                            <outlet property="UserEmailLbl" destination="n1L-Jn-qT2" id="b5G-aa-B2h"/>
                                             <outlet property="UserPicView" destination="bRw-ZX-eTn" id="sWS-1J-q3D"/>
                                         </connections>
                                     </tableViewCell>
@@ -1174,9 +1184,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="DoQ-uC-CF9"/>
         <segue reference="g3Y-sA-xlu"/>
-        <segue reference="hzj-HU-xad"/>
+        <segue reference="FaY-FF-Tgt"/>
+        <segue reference="ULe-CO-r5W"/>
         <segue reference="NaA-Hd-qmv"/>
         <segue reference="MjE-ir-J9z"/>
-        <segue reference="ULe-CO-r5W"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
     var NameArray = [String]()
     var UniNameArray = [String]()
     var UserImageFile = [PFFile]()
+    var userEmailArray = [String]()
     
     
     
@@ -28,6 +29,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
         let Height = view.frame.size.height
         
         UserResults.frame = CGRectMake(0, 0, Width, Height)
+        UserResults.reloadData()
         
         
     }
@@ -44,6 +46,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
         NameArray.removeAll(keepCapacity: false)
         UniNameArray.removeAll(keepCapacity: false)
         UserImageFile.removeAll(keepCapacity: false)
+        userEmailArray.removeAll(keepCapacity: false)
         
         
         let query = PFUser.query()
@@ -59,6 +62,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
                     self.NameArray.append(object.objectForKey("names")as! String)
                     self.UniNameArray.append(object.objectForKey("uniName")as! String)
                     self.UserImageFile.append(object.objectForKey("UserPicIMG")as! PFFile)
+                    self.userEmailArray.append(object.objectForKey("username")as! String)
                     
                     self.UserResults.reloadData()
                 }
@@ -74,7 +78,7 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return NameArray.count
+        return userEmailArray.count
         
     }
     
@@ -91,11 +95,12 @@ class Unim8sUsersViewController: UIViewController, UITableViewDataSource, UITabl
         
         Cell.NameLabel.text = self.NameArray[indexPath.row]
         Cell.UniNameLabel.text = self.UniNameArray[indexPath.row]
+        Cell.UserEmailLbl.text = self.userEmailArray[indexPath.row]
         
         let m8query = PFQuery(className: "M8s")
         
         m8query.whereKey("User", equalTo: PFUser.currentUser()!.username!)
-        m8query.whereKey("UserToM8", equalTo: Cell.NameLabel.text!)
+        m8query.whereKey("UserToM8", equalTo: Cell.UserEmailLbl.text!)
         
         m8query.countObjectsInBackgroundWithBlock { (count:Int32, error:NSError?) -> Void in
             
