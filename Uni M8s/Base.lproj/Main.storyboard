@@ -791,7 +791,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="AgeLabel" destination="RRW-Gx-kcs" id="nLh-WU-1t1"/>
-                                    <outlet property="EmailLabel" destination="GXp-eV-OPG" id="zru-2k-4Ae"/>
                                     <outlet property="NameLabel" destination="NUl-iM-W2P" id="aof-je-awd"/>
                                     <outlet property="UniNameLabel" destination="ccX-y1-Afa" id="Kgj-e2-ln6"/>
                                     <outlet property="UserImage" destination="e40-bP-Nsf" id="Hu8-6K-udS"/>
