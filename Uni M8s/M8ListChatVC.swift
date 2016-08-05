@@ -19,6 +19,7 @@ class M8ListChatVC: UITableViewController //, UITableViewDataSource, UITableView
   
    var userNameArray = [String]()
    var UserPicArray = [PFFile]()
+   var UserEmailArray = [String]()
    //User added M8's Array
    var M8sListArray = [String]()
     
@@ -28,6 +29,16 @@ class M8ListChatVC: UITableViewController //, UITableViewDataSource, UITableView
         super.viewDidLoad()
 
         self.navigationItem.title = M8List.uppercaseString
+        
+             LoadM8s()
+
+        
+        
+    }
+    
+    
+    
+    func LoadM8s(){
         
         //Find user M8s
         let M8ListQuery = PFQuery(className: "M8s")
@@ -56,6 +67,7 @@ class M8ListChatVC: UITableViewController //, UITableViewDataSource, UITableView
                     if error == nil {
                         self.userNameArray.removeAll(keepCapacity: false)
                         self.UserPicArray.removeAll(keepCapacity: false)
+                        self.UserEmailArray.removeAll(keepCapacity: false)
                         
                         
                         
@@ -64,6 +76,7 @@ class M8ListChatVC: UITableViewController //, UITableViewDataSource, UITableView
                             
                             self.userNameArray.append(object.objectForKey("names") as! String)
                             self.UserPicArray.append(object.objectForKey("UserPicIMG") as! PFFile)
+                            self.UserEmailArray.append(object.objectForKey("username") as! String)
                             
                             self.tableView.reloadData()
                             
@@ -86,14 +99,6 @@ class M8ListChatVC: UITableViewController //, UITableViewDataSource, UITableView
             }
             
         }
-
-        
-        
-    }
-    
-    
-    
-    func LoadM8s(){
         
         
     }
@@ -105,7 +110,16 @@ class M8ListChatVC: UITableViewController //, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+   
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+       let M8Cell = tableView.cellForRowAtIndexPath(indexPath) as! M8sListChatCell
+        
+        M8Name = M8Cell.NameLabel.text!
+        M8ProfileName = M8Cell.EmailLabel.text!
+        self.performSegueWithIdentifier("GoToConvoVC", sender: self)
+        
+        
+    }
 
     
 
@@ -115,9 +129,11 @@ class M8ListChatVC: UITableViewController //, UITableViewDataSource, UITableView
     }
     
     
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let M8Cell: M8sListChatCell = tableView.dequeueReusableCellWithIdentifier("M8Cell") as! M8sListChatCell
         M8Cell.NameLabel.text = userNameArray[indexPath.row]
+        M8Cell.EmailLabel.text = UserEmailArray[indexPath.row]
        
         UserPicArray[indexPath.row].getDataInBackgroundWithBlock { (data:NSData?, error: NSError?) -> Void in
             

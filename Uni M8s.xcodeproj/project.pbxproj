@@ -24,6 +24,7 @@
 		69FAA6E91D10B1FA0038512D /* UniFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FAA6E81D10B1FA0038512D /* UniFeedViewController.swift */; };
 		69FAA6EB1D10B6D00038512D /* MainFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FAA6EA1D10B6D00038512D /* MainFeedCell.swift */; };
 		69FAA6ED1D10CBA90038512D /* Unim8sUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FAA6EC1D10CBA90038512D /* Unim8sUsersViewController.swift */; };
+		E0060CE51D540F7800E1087E /* ConversationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0060CE41D540F7800E1087E /* ConversationVC.swift */; };
 		E00E3B9E1CD9533600EBAECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */; };
 		E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E3B9F1CD9533600EBAECB /* ViewController.swift */; };
 		E00E3BA31CD9533600EBAECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00E3BA11CD9533600EBAECB /* Main.storyboard */; };
@@ -86,6 +87,7 @@
 		69FAA6E81D10B1FA0038512D /* UniFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniFeedViewController.swift; sourceTree = "<group>"; };
 		69FAA6EA1D10B6D00038512D /* MainFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFeedCell.swift; sourceTree = "<group>"; };
 		69FAA6EC1D10CBA90038512D /* Unim8sUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unim8sUsersViewController.swift; sourceTree = "<group>"; };
+		E0060CE41D540F7800E1087E /* ConversationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationVC.swift; sourceTree = "<group>"; };
 		E00E3B9A1CD9533600EBAECB /* Uni M8s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uni M8s.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00E3B9D1CD9533600EBAECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E00E3B9F1CD9533600EBAECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			children = (
 				E05669B21D4568410005F118 /* M8ListChatVC.swift */,
 				E05669B41D467D370005F118 /* M8sListChatCell.swift */,
+				E0060CE41D540F7800E1087E /* ConversationVC.swift */,
 			);
 			name = "Union Chat";
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				E05669B51D467D370005F118 /* M8sListChatCell.swift in Sources */,
 				69C730331D077AD5001E409C /* UniSearchUserVC.swift in Sources */,
 				E00E3BA01CD9533600EBAECB /* ViewController.swift in Sources */,
+				E0060CE51D540F7800E1087E /* ConversationVC.swift in Sources */,
 				69C730241CFA3B0C001E409C /* HeaderInfoView.swift in Sources */,
 				69C7302A1D0101C9001E409C /* swippingUserViewController.swift in Sources */,
 				69FAA6E71D10AC180038512D /* UniPostVC.swift in Sources */,
