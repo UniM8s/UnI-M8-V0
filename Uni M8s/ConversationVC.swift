@@ -85,10 +85,10 @@ class ConversationVC: UIViewController, UIScrollViewDelegate {
         messageArray.removeAll(keepCapacity: false)
         senderArray.removeAll(keepCapacity: false)
         
-        let Predicate1 = NSPredicate(format: "sender = %@ AND reieved %@", User!, M8Name)
+        let Predicate1 = NSPredicate(format: "sender = %@ AND recieved %@", User!, M8Name)
         var ChatQuery1: PFQuery = PFQuery(className: "messages", predicate: Predicate1)
         
-        let Predicate2 = NSPredicate(format: "sender = %@ AND reieved %@", M8Name, User!)
+        let Predicate2 = NSPredicate(format: "sender = %@ AND recieved %@", M8Name, User!)
         var ChatQuery2: PFQuery = PFQuery(className: "messages", predicate: Predicate2)
         
         var Query = PFQuery.orQueryWithSubqueries([ChatQuery1,ChatQuery2])
