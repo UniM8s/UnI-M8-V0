@@ -13,20 +13,12 @@ import Parse
 var M8Name = ""
 var M8ProfileName = ""
 
-class ConversationVC: UIViewController, UIScrollViewDelegate{
+class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate{
 
     @IBOutlet weak var ResultScrollView: UIScrollView!
-    
-    
     @IBOutlet weak var FrameTextView: UIView!
-    
-    
     @IBOutlet weak var LineLabel: UILabel!
-    
-    
     @IBOutlet weak var MessageTextView: UITextView!
-   
-    
     @IBOutlet weak var SendMessageBtn: UIButton!
     
     
@@ -80,10 +72,57 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
         MessageLabel.textColor = UIColor.lightGrayColor()
         MessageTextView.addSubview(MessageLabel)
         
-        //refreshChatResults()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown", name: UIKeyboardDidShowNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
         
     }
 
+    func keyboardWasShown(notification:NSNotification) {
+        
+        let dict:NSDictionary = notification.userInfo!
+        let s:NSValue = dict.valueForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
+        let rect:CGRect = s.CGRectValue()
+        
+        UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
+            
+            self.ResultScrollView.frame.origin.y = self.scrolViewStartY - rect.height
+            self.FrameTextView.frame.origin.y = self.FrameTextStartY - rect.height
+            
+            let BottomOffset:CGPoint = CGPointMake(0, self.ResultScrollView.contentSize.height - self.ResultScrollView.bounds.size.height)
+            self.ResultScrollView.setContentOffset(BottomOffset, animated: false)
+            
+            }, completion: {
+                (finished: Bool) in
+        
+        
+      })
+    
+    }
+
+    func keyboardWillHide(notification:NSNotification) {
+        
+        let dict:NSDictionary = notification.userInfo!
+        let s:NSValue = dict.valueForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
+        let rect:CGRect = s.CGRectValue()
+        
+        UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
+            
+            self.ResultScrollView.frame.origin.y = self.scrolViewStartY             self.FrameTextView.frame.origin.y = self.FrameTextStartY
+            
+            let BottomOffset:CGPoint = CGPointMake(0, self.ResultScrollView.contentSize.height - self.ResultScrollView.bounds.size.height)
+            self.ResultScrollView.setContentOffset(BottomOffset, animated: false)
+            
+            }, completion: {
+                (finished: Bool) in
+                
+                
+        })
+
+        
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -91,9 +130,9 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
     
     
     override func viewDidAppear(animated: Bool) {
-        var Query = PFQuery(className: "_User")
+        let Query = PFQuery(className: "_User")
          Query.whereKey("username", equalTo: User!)
-        var Objects = try! Query.findObjects()
+        let Objects = try! Query.findObjects()
         
         self.ResultImageF1.removeAll(keepCapacity: false)
         
@@ -111,9 +150,9 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
             
                 self.myImage = UIImage(data: imageData!)
                 
-                var Query2 = PFQuery(className: "_User")
+                let Query2 = PFQuery(className: "_User")
                 Query2.whereKey("username", equalTo: M8Name)
-                var Object2 = try! Query2.findObjects()
+                let Object2 = try! Query2.findObjects()
                 
                 
                 
@@ -134,16 +173,16 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
                         
                         }
                         
-                    }
+                     }
                 
                 
-                }
+                  }
+             
             
-            
+               }
+        
+        
             }
-        
-        
-        }
         
         
         
@@ -204,12 +243,12 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
                         
                         let messageLabel:UILabel = UILabel()
                         messageLabel.frame = CGRectMake(0, 0, self.ResultScrollView.frame.size.width-94, CGFloat.max)
-                        messageLabel.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                        messageLabel.backgroundColor = UIColor.blueColor()
                         messageLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
                         messageLabel.textAlignment = NSTextAlignment.Left
                         messageLabel.numberOfLines = 0
                         messageLabel.font = UIFont(name: "Helvetica Neuse", size: 17)
-                        messageLabel.textColor = UIColor.blueColor()
+                        messageLabel.textColor = UIColor.whiteColor()
                         messageLabel.text = self.messageArray[i]
                         messageLabel.sizeToFit()
                         messageLabel.layer.zPosition = 20
@@ -224,7 +263,7 @@ class ConversationVC: UIViewController, UIScrollViewDelegate{
                         FrameLabel.frame.size = CGSizeMake(messageLabel.frame.size.width+10, messageLabel.frame.size.height+10 )
                         FrameLabel.frame.origin.x = (self.ResultScrollView.frame.size.width-self.FrameX) - FrameLabel.frame.size.width
                         FrameLabel.frame.origin.y = self.FrameY
-                        FrameLabel.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                        FrameLabel.backgroundColor = UIColor.blackColor()
                         FrameLabel.layer.masksToBounds = true
                         FrameLabel.layer.cornerRadius = 10
                         self.ResultScrollView.addSubview(FrameLabel)
