@@ -72,12 +72,50 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
         MessageLabel.textColor = UIColor.lightGrayColor()
         MessageTextView.addSubview(MessageLabel)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown", name: UIKeyboardDidShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasShown"), name: UIKeyboardDidShowNotification, object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide"), name: UIKeyboardWillHideNotification, object: nil)
+        
+        let TapScrollViewGesture = UITapGestureRecognizer(target: self, action: "didTapScrollView")
+        TapScrollViewGesture.numberOfTapsRequired = 1
+        ResultScrollView.addGestureRecognizer(TapScrollViewGesture)
+        
         
     }
 
+    
+    
+    func didTapScrollView() {
+    
+    self.view.endEditing(true)
+    
+    
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        if !MessageTextView.hasText() {
+        
+            self.MessageLabel.hidden = false
+            
+        }else{
+            
+            self.MessageLabel.hidden = true
+            
+            
+        }
+    }
+    
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if !MessageTextView.hasText() {
+        
+            self.MessageLabel.hidden = false
+        
+        }
+    }
+    
+    
+    
     func keyboardWasShown(notification:NSNotification) {
         
         let dict:NSDictionary = notification.userInfo!
@@ -108,7 +146,8 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
         
         UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
             
-            self.ResultScrollView.frame.origin.y = self.scrolViewStartY             self.FrameTextView.frame.origin.y = self.FrameTextStartY
+            self.ResultScrollView.frame.origin.y = self.scrolViewStartY
+            self.FrameTextView.frame.origin.y = self.FrameTextStartY
             
             let BottomOffset:CGPoint = CGPointMake(0, self.ResultScrollView.contentSize.height - self.ResultScrollView.bounds.size.height)
             self.ResultScrollView.setContentOffset(BottomOffset, animated: false)
@@ -237,7 +276,7 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
                 
                 }
                 
-                for var i = 0; i <= self.messageArray.count-1; i += 1 {
+               for i in 0.stride(through: self.messageArray.count-1, by: 1 ) {
                     
                     if self.senderArray[i] == User {
                         
@@ -346,5 +385,44 @@ class ConversationVC: UIViewController, UIScrollViewDelegate, UITextViewDelegate
         
     }
  
+    
+    
+    @IBAction func sendBtnClicked(sender: AnyObject) {
+        
+        if MessageTextView.text == "" {
+        
+        print("no Text")
+            
+        }else{
+            
+            let MessageTable = PFObject(className: "messages")
+            MessageTable["sender"] = User
+            MessageTable["recieved"] = M8ProfileName
+            MessageTable["messages"] = self.MessageTextView.text
+            MessageTable.saveInBackgroundWithBlock{
+                (success: Bool, error:NSError?) -> Void in
+                
+                if success == true{
+                
+                
+                print("Message Sent")
+                    self.MessageTextView.text == ""
+                    self.MessageLabel.hidden = false
+                    self.refreshChatResults()
+                
+                
+                }
+            
+            
+            }
+        
+        
+        }
+        
+        
+        
+        
+    }
+    
 
 }
